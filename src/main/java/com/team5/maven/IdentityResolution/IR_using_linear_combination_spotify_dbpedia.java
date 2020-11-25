@@ -5,6 +5,7 @@ import java.io.File;
 import org.slf4j.Logger;
 
 import com.team5.maven.IdentityResolution.blocking.SongBlockingKeyByNameGenerator;
+import com.team5.maven.IdentityResolution.comparators.SongArtistsComparatorToken;
 import com.team5.maven.IdentityResolution.comparators.SongNameComparatorEqual;
 import com.team5.maven.IdentityResolution.model.Song;
 import com.team5.maven.IdentityResolution.model.SongXMLReader;
@@ -22,7 +23,7 @@ import de.uni_mannheim.informatik.dws.winter.model.io.CSVCorrespondenceFormatter
 import de.uni_mannheim.informatik.dws.winter.processing.Processable;
 import de.uni_mannheim.informatik.dws.winter.utils.WinterLogManager;
 
-public class IR_using_linear_combination {
+public class IR_using_linear_combination_spotify_dbpedia {
 
 	private static final Logger logger = WinterLogManager.activateLogger("default");
 	
@@ -33,8 +34,8 @@ public class IR_using_linear_combination {
 		System.out.println("*\n*\tLoading datasets\n*");
 		HashedDataSet<Song, Attribute> dbpedia = new HashedDataSet<>();
 		new SongXMLReader().loadFromXML(new File("data/input/dbpedia_translated.xml"), "/songs/song", dbpedia);
-		HashedDataSet<Song, Attribute> musicbrainz = new HashedDataSet<>();
-		new SongXMLReader().loadFromXML(new File("data/input/musicbrainz_translated.xml"), "/songs/song", musicbrainz);
+		HashedDataSet<Song, Attribute> spotify = new HashedDataSet<>();
+		new SongXMLReader().loadFromXML(new File("data/input/spotify_translated.xml"), "/songs/song", spotify);
 
 		// load the gold standard (test set)
 		System.out.println("*\n*\tLoading gold standard\n*");
@@ -45,10 +46,11 @@ public class IR_using_linear_combination {
 		// create a matching rule
 		LinearCombinationMatchingRule<Song, Attribute> matchingRule = new LinearCombinationMatchingRule<>(
 				0.7);
-		matchingRule.activateDebugReport("data/output/debugResultsMatchingRule.csv", 1000, gsTest);
+		matchingRule.activateDebugReport("data/output/debugResultsMatchingRule_spotify_dbpedia.csv", 1000, gsTest);
 		
 		// add comparators
-		matchingRule.addComparator(new SongNameComparatorEqual(), 1);
+		matchingRule.addComparator(new SongNameComparatorEqual(), 0.7);
+		matchingRule.addComparator(new SongArtistsComparatorToken(), 0.3);
 		
 
 		// create a blocker (blocking strategy)
@@ -57,7 +59,7 @@ public class IR_using_linear_combination {
 //		SortedNeighbourhoodBlocker<Movie, Attribute, Attribute> blocker = new SortedNeighbourhoodBlocker<>(new MovieBlockingKeyByTitleGenerator(), 1);
 		blocker.setMeasureBlockSizes(true);
 		//Write debug results to file:
-		blocker.collectBlockSizeData("data/output/debugResultsBlocking.csv", 100);
+		blocker.collectBlockSizeData("data/output/debugResultsBlocking_spotify_dbpedia.csv", 100);
 		
 		// Initialize Matching Engine
 		MatchingEngine<Song, Attribute> engine = new MatchingEngine<>();
@@ -65,7 +67,7 @@ public class IR_using_linear_combination {
 		// Execute the matching
 		System.out.println("*\n*\tRunning identity resolution\n*");
 		Processable<Correspondence<Song, Attribute>> correspondences = engine.runIdentityResolution(
-				dbpedia, musicbrainz, null, matchingRule,
+				dbpedia, spotify, null, matchingRule,
 				blocker);
 
 		// Create a top-1 global matching
@@ -77,7 +79,7 @@ public class IR_using_linear_combination {
 //		 correspondences = maxWeight.getResult();
 
 		// write the correspondences to the output file
-		new CSVCorrespondenceFormatter().writeCSV(new File("data/output/dbpedia_musicbrainz_correspondences.csv"), correspondences);	
+		new CSVCorrespondenceFormatter().writeCSV(new File("data/output/dbpedia_spotify_correspondences.csv"), correspondences);	
 		
 		System.out.println("*\n*\tEvaluating result\n*");
 		// evaluate your result

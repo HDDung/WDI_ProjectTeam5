@@ -1,0 +1,14 @@
+<songs>
+<song>
+	<id>song1</id>
+	<name>This is America</name>
+	<artists>Dung, Daisy</artists>
+	<years>2013-01-01</years>
+	<genres>Rock</genres>
+	<albums>Mannheim</albums>
+	<duration>28.3</duration>
+	<recordLabel>Stephan Records</recordLabel>
+	<producers>Stephan1, Stephan2</producers>
+	<writers>Cat1, Cat2</writers>
+</song>
+</songs>
