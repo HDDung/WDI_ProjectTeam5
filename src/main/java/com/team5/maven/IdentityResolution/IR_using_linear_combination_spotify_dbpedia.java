@@ -4,14 +4,18 @@ import java.io.File;
 
 import org.slf4j.Logger;
 
+import com.team5.maven.IdentityResolution.blocking.SongBlockingKeyByAlbumGenerator;
 import com.team5.maven.IdentityResolution.blocking.SongBlockingKeyByNameGenerator;
 import com.team5.maven.IdentityResolution.comparators.SongArtistsComparatorToken;
 import com.team5.maven.IdentityResolution.comparators.SongNameComparatorEqual;
+import com.team5.maven.IdentityResolution.comparators.SongNameComparatorJaccard;
+import com.team5.maven.IdentityResolution.comparators.SongNameComparatorLevenshtein;
 import com.team5.maven.IdentityResolution.model.Song;
 import com.team5.maven.IdentityResolution.model.SongXMLReader;
 
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEngine;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator;
+import de.uni_mannheim.informatik.dws.winter.matching.algorithms.MaximumBipartiteMatchingAlgorithm;
 import de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardRecordBlocker;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.LinearCombinationMatchingRule;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
@@ -41,7 +45,7 @@ public class IR_using_linear_combination_spotify_dbpedia {
 		System.out.println("*\n*\tLoading gold standard\n*");
 		MatchingGoldStandard gsTest = new MatchingGoldStandard();
 		gsTest.loadFromCSVFile(new File(
-				"data/goldstandard/gs_dbpedia_musicbrainz_test.csv"));
+				"data/goldstandard/gs_spotify_musicbrainz_test.csv"));
 
 		// create a matching rule
 		LinearCombinationMatchingRule<Song, Attribute> matchingRule = new LinearCombinationMatchingRule<>(
@@ -74,7 +78,7 @@ public class IR_using_linear_combination_spotify_dbpedia {
 //		  correspondences = engine.getTopKInstanceCorrespondences(correspondences, 1, 0.0);
 
 //		 Alternative: Create a maximum-weight, bipartite matching
-//		 MaximumBipartiteMatchingAlgorithm<Movie,Attribute> maxWeight = new MaximumBipartiteMatchingAlgorithm<>(correspondences);
+//		 MaximumBipartiteMatchingAlgorithm<Song,Attribute> maxWeight = new MaximumBipartiteMatchingAlgorithm<>(correspondences);
 //		 maxWeight.run();
 //		 correspondences = maxWeight.getResult();
 
@@ -88,7 +92,8 @@ public class IR_using_linear_combination_spotify_dbpedia {
 				gsTest);
 
 		// print the evaluation result
-		System.out.println("DBpedia <-> Musicbrainz");
+		System.out.println(""
+				+ "Spotify <-> Musicbrainz");
 		System.out.println(String.format(
 				"Precision: %.4f",perfTest.getPrecision()));
 		System.out.println(String.format(
