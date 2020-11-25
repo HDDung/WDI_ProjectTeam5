@@ -4,13 +4,17 @@ import java.io.File;
 
 import org.slf4j.Logger;
 
+import com.team5.maven.IdentityResolution.blocking.SongBlockingKeyByAlbumGenerator;
 import com.team5.maven.IdentityResolution.blocking.SongBlockingKeyByNameGenerator;
 import com.team5.maven.IdentityResolution.comparators.SongNameComparatorEqual;
+import com.team5.maven.IdentityResolution.comparators.SongNameComparatorJaccard;
+import com.team5.maven.IdentityResolution.comparators.SongNameComparatorLevenshtein;
 import com.team5.maven.IdentityResolution.model.Song;
 import com.team5.maven.IdentityResolution.model.SongXMLReader;
 
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEngine;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator;
+import de.uni_mannheim.informatik.dws.winter.matching.algorithms.MaximumBipartiteMatchingAlgorithm;
 import de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardRecordBlocker;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.LinearCombinationMatchingRule;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
@@ -31,8 +35,8 @@ public class IR_using_linear_combination {
 		// loading data
     	
 		System.out.println("*\n*\tLoading datasets\n*");
-		HashedDataSet<Song, Attribute> dbpedia = new HashedDataSet<>();
-		new SongXMLReader().loadFromXML(new File("data/input/dbpedia_translated.xml"), "/songs/song", dbpedia);
+		HashedDataSet<Song, Attribute> spotify = new HashedDataSet<>();
+		new SongXMLReader().loadFromXML(new File("data/input/Spotify.xml"), "/songs/song", spotify);
 		HashedDataSet<Song, Attribute> musicbrainz = new HashedDataSet<>();
 		new SongXMLReader().loadFromXML(new File("data/input/musicbrainz_translated.xml"), "/songs/song", musicbrainz);
 
@@ -40,15 +44,18 @@ public class IR_using_linear_combination {
 		System.out.println("*\n*\tLoading gold standard\n*");
 		MatchingGoldStandard gsTest = new MatchingGoldStandard();
 		gsTest.loadFromCSVFile(new File(
-				"data/goldstandard/gs_dbpedia_musicbrainz_test.csv"));
+				"data/goldstandard/gs_spotify_musicbrainz_test.csv"));
 
 		// create a matching rule
 		LinearCombinationMatchingRule<Song, Attribute> matchingRule = new LinearCombinationMatchingRule<>(
 				0.7);
-		matchingRule.activateDebugReport("data/output/debugResultsMatchingRule.csv", 1000, gsTest);
+		matchingRule.activateDebugReport("data/output/debugResultsMatchingRule_s_m.csv", 2000, gsTest);
 		
 		// add comparators
-		matchingRule.addComparator(new SongNameComparatorEqual(), 1);
+//		matchingRule.addComparator(new SongNameComparatorEqual(), 1);
+		matchingRule.addComparator(new SongNameComparatorJaccard(), 1);
+//		matchingRule.addComparator(new SongNameComparatorLevenshtein(), 1);
+		
 		
 
 		// create a blocker (blocking strategy)
@@ -65,19 +72,19 @@ public class IR_using_linear_combination {
 		// Execute the matching
 		System.out.println("*\n*\tRunning identity resolution\n*");
 		Processable<Correspondence<Song, Attribute>> correspondences = engine.runIdentityResolution(
-				dbpedia, musicbrainz, null, matchingRule,
+				spotify, musicbrainz, null, matchingRule,
 				blocker);
 
 		// Create a top-1 global matching
 //		  correspondences = engine.getTopKInstanceCorrespondences(correspondences, 1, 0.0);
 
 //		 Alternative: Create a maximum-weight, bipartite matching
-//		 MaximumBipartiteMatchingAlgorithm<Movie,Attribute> maxWeight = new MaximumBipartiteMatchingAlgorithm<>(correspondences);
+//		 MaximumBipartiteMatchingAlgorithm<Song,Attribute> maxWeight = new MaximumBipartiteMatchingAlgorithm<>(correspondences);
 //		 maxWeight.run();
 //		 correspondences = maxWeight.getResult();
 
 		// write the correspondences to the output file
-		new CSVCorrespondenceFormatter().writeCSV(new File("data/output/dbpedia_musicbrainz_correspondences.csv"), correspondences);	
+		new CSVCorrespondenceFormatter().writeCSV(new File("data/output/spotify_musicbrainz_correspondences.csv"), correspondences);	
 		
 		System.out.println("*\n*\tEvaluating result\n*");
 		// evaluate your result
@@ -86,7 +93,8 @@ public class IR_using_linear_combination {
 				gsTest);
 
 		// print the evaluation result
-		System.out.println("DBpedia <-> Musicbrainz");
+		System.out.println(""
+				+ "Spotify <-> Musicbrainz");
 		System.out.println(String.format(
 				"Precision: %.4f",perfTest.getPrecision()));
 		System.out.println(String.format(
