@@ -1,5 +1,7 @@
 package com.team5.maven.IdentityResolution.comparators;
 
+import java.util.List;
+
 import com.team5.maven.IdentityResolution.model.Song;
 
 import de.uni_mannheim.informatik.dws.winter.matching.rules.Comparator;
@@ -8,11 +10,12 @@ import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
 import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.similarity.EqualsSimilarity;
+import de.uni_mannheim.informatik.dws.winter.similarity.string.TokenizingJaccardSimilarity;
 
-public class SongNameComparatorEqual implements Comparator<Song, Attribute> {
+public class SongNameComparatorTokenJaccard implements Comparator<Song, Attribute> {
 
 	private static final long serialVersionUID = 1L;
-	private EqualsSimilarity<String> sim = new EqualsSimilarity<String>();
+	private TokenizingJaccardSimilarity sim = new TokenizingJaccardSimilarity();
 	
 	private ComparatorLogger comparisonLog;
 
@@ -22,9 +25,9 @@ public class SongNameComparatorEqual implements Comparator<Song, Attribute> {
 			Song record2,
 			Correspondence<Attribute, Matchable> schemaCorrespondences) {
 		
-    	String s1 = record1.getName().toLowerCase();
-		String s2 = record2.getName().toLowerCase();
-    	
+    	String s1 = record1.getName().toLowerCase().replace('(', ' ').replace(')', ' ');
+		String s2 = record2.getName().toLowerCase().replace('(', ' ').replace(')', ' ');
+		
     	double similarity = sim.calculate(s1, s2);
     	
 		if(this.comparisonLog != null){

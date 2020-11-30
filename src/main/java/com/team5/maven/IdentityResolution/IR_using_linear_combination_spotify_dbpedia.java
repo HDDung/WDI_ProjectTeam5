@@ -6,10 +6,12 @@ import org.slf4j.Logger;
 
 import com.team5.maven.IdentityResolution.blocking.SongBlockingKeyByAlbumGenerator;
 import com.team5.maven.IdentityResolution.blocking.SongBlockingKeyByNameGenerator;
+import com.team5.maven.IdentityResolution.comparators.SongArtistCustomizedComparator;
 import com.team5.maven.IdentityResolution.comparators.SongArtistsComparatorToken;
 import com.team5.maven.IdentityResolution.comparators.SongNameComparatorEqual;
 import com.team5.maven.IdentityResolution.comparators.SongNameComparatorJaccard;
 import com.team5.maven.IdentityResolution.comparators.SongNameComparatorLevenshtein;
+import com.team5.maven.IdentityResolution.comparators.SongNameComparatorTokenJaccard;
 import com.team5.maven.IdentityResolution.model.Song;
 import com.team5.maven.IdentityResolution.model.SongXMLReader;
 
@@ -45,7 +47,7 @@ public class IR_using_linear_combination_spotify_dbpedia {
 		System.out.println("*\n*\tLoading gold standard\n*");
 		MatchingGoldStandard gsTest = new MatchingGoldStandard();
 		gsTest.loadFromCSVFile(new File(
-				"data/goldstandard/gs_spotify_musicbrainz_test.csv"));
+				"data/goldstandard/gs_spotify_dbpedia_test.csv"));
 
 		// create a matching rule
 		LinearCombinationMatchingRule<Song, Attribute> matchingRule = new LinearCombinationMatchingRule<>(
@@ -53,8 +55,8 @@ public class IR_using_linear_combination_spotify_dbpedia {
 		matchingRule.activateDebugReport("data/output/debugResultsMatchingRule_spotify_dbpedia.csv", 1000, gsTest);
 		
 		// add comparators
-		matchingRule.addComparator(new SongNameComparatorEqual(), 0.7);
-		matchingRule.addComparator(new SongArtistsComparatorToken(), 0.3);
+		matchingRule.addComparator(new SongNameComparatorTokenJaccard(), 0.6);
+		matchingRule.addComparator(new SongArtistCustomizedComparator(), 0.4);
 		
 
 		// create a blocker (blocking strategy)
