@@ -28,10 +28,10 @@ public class SongXMLReader extends XMLMatchableReader<Song, Attribute>  {
 
 		// fill the attributes
 		song.setName(getValueFromChildElement(node, "name"));
-		// load the list of artists
-		List<String> artists = getListFromChildElement(node, "artists");
-		//System.out.println(artists);
-		song.setArtist(artists);
+		
+		song.setArtist(getValueFromChildElement(node, "artists"));
+		
+		song.setAlbum(getValueFromChildElement(node, "albums"));
 
 		// load the list of actors
 //		List<Actor> actors = getObjectListFromChildElement(node, "actors",
