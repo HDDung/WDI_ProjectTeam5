@@ -16,7 +16,7 @@ public class Song extends AbstractRecord<Attribute> implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	private String name;
-	private List<String> artist;
+	private String artist;
 	private String genre;
 	private String album;
 	private double duration;
@@ -37,11 +37,11 @@ public class Song extends AbstractRecord<Attribute> implements Serializable {
 		this.name = name;
 	}
 
-	public List<String> getArtist() {
+	public String getArtist() {
 		return artist;
 	}
 
-	public void setArtist(List<String> artist) {
+	public void setArtist(String artist) {
 		this.artist = artist;
 	}
 
