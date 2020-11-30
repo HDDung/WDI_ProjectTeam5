@@ -1,5 +1,7 @@
 package com.team5.maven.IdentityResolution.model;
 
+import java.util.List;
+
 import org.w3c.dom.Node;
 
 import de.uni_mannheim.informatik.dws.winter.model.DataSet;
@@ -26,7 +28,10 @@ public class SongXMLReader extends XMLMatchableReader<Song, Attribute>  {
 
 		// fill the attributes
 		song.setName(getValueFromChildElement(node, "name"));
-		
+		// load the list of artists
+		List<String> artists = getListFromChildElement(node, "artists");
+		//System.out.println(artists);
+		song.setArtist(artists);
 
 		// load the list of actors
 //		List<Actor> actors = getObjectListFromChildElement(node, "actors",

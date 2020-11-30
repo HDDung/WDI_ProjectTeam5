@@ -1,6 +1,8 @@
 package com.team5.maven.IdentityResolution.model;
 
 import java.io.Serializable;
+import java.util.List;
+
 import de.uni_mannheim.informatik.dws.winter.model.AbstractRecord;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 
@@ -14,7 +16,7 @@ public class Song extends AbstractRecord<Attribute> implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 	private String name;
-	private String artist;
+	private List<String> artist;
 	private String genre;
 	private String album;
 	private double duration;
@@ -35,11 +37,11 @@ public class Song extends AbstractRecord<Attribute> implements Serializable {
 		this.name = name;
 	}
 
-	public String getArtist() {
+	public List<String> getArtist() {
 		return artist;
 	}
 
-	public void setArtist(String artist) {
+	public void setArtist(List<String> artist) {
 		this.artist = artist;
 	}
 

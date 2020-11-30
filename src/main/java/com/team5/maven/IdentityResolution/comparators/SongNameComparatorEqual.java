@@ -22,8 +22,8 @@ public class SongNameComparatorEqual implements Comparator<Song, Attribute> {
 			Song record2,
 			Correspondence<Attribute, Matchable> schemaCorrespondences) {
 		
-    	String s1 = record1.getName();
-		String s2 = record2.getName();
+    	String s1 = record1.getName().toLowerCase();
+		String s2 = record2.getName().toLowerCase();
     	
     	double similarity = sim.calculate(s1, s2);
     	
