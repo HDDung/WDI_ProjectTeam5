@@ -6,8 +6,13 @@ import org.slf4j.Logger;
 
 import com.team5.maven.IdentityResolution.blocking.SongBlockingKeyByArtistGenerator;
 import com.team5.maven.IdentityResolution.blocking.SongBlockingKeyByNameGenerator;
+import com.team5.maven.IdentityResolution.comparators.SongAlbumComparatorMaxSim;
+import com.team5.maven.IdentityResolution.comparators.SongAlbumComparatorToken;
+import com.team5.maven.IdentityResolution.comparators.SongArtistsComparatorLevenshtein;
+import com.team5.maven.IdentityResolution.comparators.SongArtistsComparatorToken;
 import com.team5.maven.IdentityResolution.comparators.SongNameComparatorEqual;
 import com.team5.maven.IdentityResolution.comparators.SongNameComparatorLevenshtein;
+import com.team5.maven.IdentityResolution.comparators.SongNameComparatorRemoveBrackets;
 import com.team5.maven.IdentityResolution.model.Song;
 import com.team5.maven.IdentityResolution.model.SongXMLReader;
 
@@ -28,7 +33,7 @@ import de.uni_mannheim.informatik.dws.winter.utils.WinterLogManager;
 
 public class IR_using_linear_combination_dbpedia_musicbrainz {
 
-	private static final Logger logger = WinterLogManager.activateLogger("default");
+	private static final Logger logger = WinterLogManager.activateLogger("traceFile");
 	
     public static void main( String[] args ) throws Exception
     { 
@@ -48,25 +53,30 @@ public class IR_using_linear_combination_dbpedia_musicbrainz {
 
 		// create a matching rule
 		LinearCombinationMatchingRule<Song, Attribute> matchingRule = new LinearCombinationMatchingRule<>(
-				0.5);
-		matchingRule.activateDebugReport("data/output/debugResultsMatchingRule.csv", 10000, gsTest);
+				0.7);
+		matchingRule.activateDebugReport("data/output/debugResultsMatchingRule_dbpedia_musicbrainz.csv", 10000, gsTest);
 		
 		// add comparators
-		matchingRule.addComparator(new SongNameComparatorLevenshtein(), 1);
+		//matchingRule.addComparator(new SongNameComparatorLevenshtein(), 0.5);
+		matchingRule.addComparator(new SongNameComparatorRemoveBrackets(), 0.65);
+		matchingRule.addComparator(new SongArtistsComparatorToken(), 0.2);
+		//matchingRule.addComparator(new SongArtistsComparatorLevenshtein(), 0.3);
+		//matchingRule.addComparator(new SongAlbumComparatorToken(), 0.25);
+		matchingRule.addComparator(new SongAlbumComparatorMaxSim(), 0.15);
 		
 
 		// create a blocker (blocking strategy)
 		
-		//StandardRecordBlocker<Song, Attribute> blocker = new StandardRecordBlocker<Song, Attribute>(new SongBlockingKeyByNameGenerator());
-		StandardRecordBlocker<Song, Attribute> blocker = new StandardRecordBlocker<Song, Attribute>(new SongBlockingKeyByArtistGenerator());
+		StandardRecordBlocker<Song, Attribute> blocker = new StandardRecordBlocker<Song, Attribute>(new SongBlockingKeyByNameGenerator());
+		//StandardRecordBlocker<Song, Attribute> blocker = new StandardRecordBlocker<Song, Attribute>(new SongBlockingKeyByArtistGenerator());
 
 		//NoBlocker<Song, Attribute> blocker = new NoBlocker<>();
  		
-		//SortedNeighbourhoodBlocker<Song, Attribute, Attribute> blocker = new SortedNeighbourhoodBlocker<>(new SongBlockingKeyByNameGenerator(), 1);
+		//SortedNeighbourhoodBlocker<Song, Attribute, Attribute> blocker = new SortedNeighbourhoodBlocker<>(new SongBlockingKeyByNameGenerator(), 1000);
 		
 		blocker.setMeasureBlockSizes(true);
 		//Write debug results to file:
-		blocker.collectBlockSizeData("data/output/debugResultsBlocking.csv", 1000);
+		blocker.collectBlockSizeData("data/output/debugResultsBlocking_dbpedia_musicbrainz.csv", 1000);
 		
 		// Initialize Matching Engine
 		MatchingEngine<Song, Attribute> engine = new MatchingEngine<>();
@@ -78,7 +88,7 @@ public class IR_using_linear_combination_dbpedia_musicbrainz {
 				blocker);
 
 		// Create a top-1 global matching
-//		  correspondences = engine.getTopKInstanceCorrespondences(correspondences, 1, 0.0);
+		// correspondences = engine.getTopKInstanceCorrespondences(correspondences, 1, 0.0);
 
 //		 Alternative: Create a maximum-weight, bipartite matching
 //		 MaximumBipartiteMatchingAlgorithm<Movie,Attribute> maxWeight = new MaximumBipartiteMatchingAlgorithm<>(correspondences);
