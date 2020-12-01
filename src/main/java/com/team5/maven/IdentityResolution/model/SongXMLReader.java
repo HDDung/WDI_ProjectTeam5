@@ -28,6 +28,10 @@ FusibleFactory<Song, Attribute>  {
 		dataset.addAttribute(Song.ALBUM);
 		dataset.addAttribute(Song.YEAR);
 		dataset.addAttribute(Song.DURATION);
+		dataset.addAttribute(Song.GENRE);
+		dataset.addAttribute(Song.RECORDLABEL);
+		dataset.addAttribute(Song.PRODUCER);
+		dataset.addAttribute(Song.WRITER);
 		
 	}
 	
@@ -44,6 +48,18 @@ FusibleFactory<Song, Attribute>  {
 		song.setArtist(getValueFromChildElement(node, "artists"));
 		
 		song.setAlbum(getValueFromChildElement(node, "albums"));
+		
+		song.setYear(getValueFromChildElement(node, "years"));
+		
+		song.setGenre(getValueFromChildElement(node, "genres"));
+		
+		//song.setDuration(Double.parseDouble(getValueFromChildElement(node, "duration")));
+		
+		song.setRecordLabel(getValueFromChildElement(node, "recordLabel"));
+		
+		song.setProducer(getValueFromChildElement(node, "producers"));
+		
+		song.setWriter(getValueFromChildElement(node, "writers"));
 
 		// load the list of actors
 //		List<Actor> actors = getObjectListFromChildElement(node, "actors",

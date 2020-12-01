@@ -32,12 +32,38 @@ public class SongXMLFormatter extends XMLFormatter<Song> {
 		song.appendChild(createTextElementWithProvenance("name",
 				record.getName(),
 				record.getMergedAttributeProvenance(Song.NAME), doc));
-		song.appendChild(createTextElementWithProvenance("artist",
+		
+		song.appendChild(createTextElementWithProvenance("artists",
 				record.getArtist(),
 				record.getMergedAttributeProvenance(Song.ARTIST), doc));
-		song.appendChild(createTextElementWithProvenance("album", record
+		
+		song.appendChild(createTextElementWithProvenance("albums", record
 				.getAlbum(), record
 				.getMergedAttributeProvenance(Song.ALBUM), doc));
+		
+		song.appendChild(createTextElementWithProvenance("years",
+				record.getName(),
+				record.getMergedAttributeProvenance(Song.YEAR), doc));
+		
+		song.appendChild(createTextElementWithProvenance("duration",
+				record.getArtist(),
+				record.getMergedAttributeProvenance(Song.DURATION), doc));
+		
+		song.appendChild(createTextElementWithProvenance("genres", record
+				.getAlbum(), record
+				.getMergedAttributeProvenance(Song.GENRE), doc));
+		
+		song.appendChild(createTextElementWithProvenance("recordLabel",
+				record.getName(),
+				record.getMergedAttributeProvenance(Song.RECORDLABEL), doc));
+		
+		song.appendChild(createTextElementWithProvenance("producers",
+				record.getArtist(),
+				record.getMergedAttributeProvenance(Song.PRODUCER), doc));
+		
+		song.appendChild(createTextElementWithProvenance("writers", record
+				.getAlbum(), record
+				.getMergedAttributeProvenance(Song.WRITER), doc));
 
 		return song;
 	}
