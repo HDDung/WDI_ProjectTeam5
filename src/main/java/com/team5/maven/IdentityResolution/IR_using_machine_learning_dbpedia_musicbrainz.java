@@ -10,7 +10,6 @@ import com.team5.maven.IdentityResolution.comparators.SongAlbumComparatorToken;
 import com.team5.maven.IdentityResolution.comparators.SongArtistsComparatorLevenshtein;
 import com.team5.maven.IdentityResolution.comparators.SongArtistsComparatorToken;
 import com.team5.maven.IdentityResolution.comparators.SongNameComparatorLevenshtein;
-import com.team5.maven.IdentityResolution.comparators.SongNameComparatorRemoveBrackets;
 import com.team5.maven.IdentityResolution.comparators.SongNameComparatorTokenJaccard;
 import com.team5.maven.IdentityResolution.model.Song;
 import com.team5.maven.IdentityResolution.model.SongXMLReader;
@@ -67,7 +66,7 @@ public class IR_using_machine_learning_dbpedia_musicbrainz {
 		matchingRule.activateDebugReport("data/output/debugResultsMatchingRule_ml.csv", 1000, gsTraining);
 		
 		// add comparators
-		matchingRule.addComparator(new SongNameComparatorRemoveBrackets());
+		matchingRule.addComparator(new SongNameComparatorLevenshtein());
 		matchingRule.addComparator(new SongNameComparatorLevenshtein());
 		matchingRule.addComparator(new SongArtistsComparatorToken());
 		matchingRule.addComparator(new SongArtistsComparatorLevenshtein());

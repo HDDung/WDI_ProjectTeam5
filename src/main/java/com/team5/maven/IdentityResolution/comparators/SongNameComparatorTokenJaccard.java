@@ -25,8 +25,8 @@ public class SongNameComparatorTokenJaccard implements Comparator<Song, Attribut
 			Song record2,
 			Correspondence<Attribute, Matchable> schemaCorrespondences) {
 		
-    	String s1 = record1.getName().toLowerCase().replace('(', ' ').replace(')', ' ');
-		String s2 = record2.getName().toLowerCase().replace('(', ' ').replace(')', ' ');
+    	String s1 = record1.getName().toLowerCase().replaceAll("\\(.*\\)", "").replaceAll("(-.*)", "");
+		String s2 = record2.getName().toLowerCase().replaceAll("\\(.*\\)", "").replaceAll("(-.*)", "");
 		
     	double similarity = sim.calculate(s1, s2);
     	

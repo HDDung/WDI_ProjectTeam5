@@ -12,7 +12,6 @@ import com.team5.maven.IdentityResolution.comparators.SongArtistsComparatorLeven
 import com.team5.maven.IdentityResolution.comparators.SongArtistsComparatorToken;
 import com.team5.maven.IdentityResolution.comparators.SongNameComparatorEqual;
 import com.team5.maven.IdentityResolution.comparators.SongNameComparatorLevenshtein;
-import com.team5.maven.IdentityResolution.comparators.SongNameComparatorRemoveBrackets;
 import com.team5.maven.IdentityResolution.model.Song;
 import com.team5.maven.IdentityResolution.model.SongXMLReader;
 
@@ -58,7 +57,7 @@ public class IR_using_linear_combination_dbpedia_musicbrainz {
 		
 		// add comparators
 		//matchingRule.addComparator(new SongNameComparatorLevenshtein(), 0.5);
-		matchingRule.addComparator(new SongNameComparatorRemoveBrackets(), 0.65);
+		matchingRule.addComparator(new SongNameComparatorLevenshtein(), 0.65);
 		matchingRule.addComparator(new SongArtistsComparatorToken(), 0.2);
 		//matchingRule.addComparator(new SongArtistsComparatorLevenshtein(), 0.3);
 		//matchingRule.addComparator(new SongAlbumComparatorToken(), 0.25);
