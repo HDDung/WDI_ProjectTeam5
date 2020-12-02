@@ -11,7 +11,7 @@ import de.uni_mannheim.informatik.dws.winter.similarity.EqualsSimilarity;
 import de.uni_mannheim.informatik.dws.winter.similarity.string.LevenshteinSimilarity;
 import de.uni_mannheim.informatik.dws.winter.similarity.string.TokenizingJaccardSimilarity;
 
-public class SongNameComparatorLevenshtein implements Comparator<Song, Attribute> {
+public class SongNameComparatorRemoveBrackets implements Comparator<Song, Attribute> {
 
 	private static final long serialVersionUID = 1L;
 	private LevenshteinSimilarity sim = new LevenshteinSimilarity();
@@ -24,8 +24,9 @@ public class SongNameComparatorLevenshtein implements Comparator<Song, Attribute
 			Song record2,
 			Correspondence<Attribute, Matchable> schemaCorrespondences) {
 		
-    	String s1 = record1.getName();
-		String s2 = record2.getName();
+		//Preprocessing: Remove everything in brackets
+    	String s1 = record1.getName().replaceAll("\\(.*\\)", "");
+		String s2 = record2.getName().replaceAll("\\(.*\\)", "");
     	
     	double similarity = sim.calculate(s1, s2);
     	
