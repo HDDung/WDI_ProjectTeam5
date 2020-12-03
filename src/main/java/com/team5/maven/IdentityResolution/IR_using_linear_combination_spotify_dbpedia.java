@@ -9,7 +9,6 @@ import com.team5.maven.IdentityResolution.blocking.SongBlockingKeyByNameGenerato
 import com.team5.maven.IdentityResolution.comparators.SongArtistCustomizedComparator;
 import com.team5.maven.IdentityResolution.comparators.SongArtistsComparatorToken;
 import com.team5.maven.IdentityResolution.comparators.SongNameComparatorEqual;
-import com.team5.maven.IdentityResolution.comparators.SongNameComparatorJaccard;
 import com.team5.maven.IdentityResolution.comparators.SongNameComparatorLevenshtein;
 import com.team5.maven.IdentityResolution.comparators.SongNameComparatorRemoveBrackets;
 import com.team5.maven.IdentityResolution.comparators.SongNameComparatorRemoveBracketsAndDash;

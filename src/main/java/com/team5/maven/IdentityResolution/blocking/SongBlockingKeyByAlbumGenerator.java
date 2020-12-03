@@ -28,6 +28,7 @@ RecordBlockingKeyGenerator<Song, Attribute> {
 
 		String blockingKeyValue = "";
 
+		//iterate over first 2 tokens and use the first 2 characters of each as key
 		for(int i = 0; i <= 2 && i < tokens.length; i++) {
 			blockingKeyValue += tokens[i].substring(0, Math.min(2,tokens[i].length())).toUpperCase();
 		}

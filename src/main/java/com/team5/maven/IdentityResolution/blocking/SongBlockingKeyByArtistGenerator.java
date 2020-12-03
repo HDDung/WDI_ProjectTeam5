@@ -26,10 +26,21 @@ RecordBlockingKeyGenerator<Song, Attribute> {
 	public void generateBlockingKeys(Song record, Processable<Correspondence<Attribute, Matchable>> correspondences,
 			DataIterator<Pair<String, Song>> resultCollector) {
 
-		String artists  = record.getArtist();
-		System.out.println(artists);
-
 		String blockingKeyValue = "";
+		
+		String[] tokens  = record.getArtist().split(" ");
+		
+		//iterate over first 2 tokens and use the first 2 characters of each as key
+		for(int i = 0; i <= 2 && i < tokens.length; i++) {
+			blockingKeyValue += tokens[i].substring(0, Math.min(2,tokens[i].length())).toUpperCase();
+		}
+		
+		//iterate over first 2 tokens and use the first 3 characters of each as key
+//		for(int i = 0; i <= 2 && i < tokens.length; i++) {
+//			blockingKeyValue += tokens[i].substring(0, Math.min(3,tokens[i].length())).toUpperCase();
+//		}
+
+		resultCollector.next(new Pair<>(blockingKeyValue, record));
 		
 		//iterate over first 5 artists and use the first 3 characters of each as key
 //		for(int i = 0; i <= 5 && i < tokens.size(); i++) {
@@ -37,8 +48,6 @@ RecordBlockingKeyGenerator<Song, Attribute> {
 //				 blockingKeyValue += tokens.get(i).substring(0, Math.min(3,tokens.get(i).length())).toUpperCase();
 //			}
 //		}
-
-		resultCollector.next(new Pair<>(blockingKeyValue, record));
 	}
 
 }

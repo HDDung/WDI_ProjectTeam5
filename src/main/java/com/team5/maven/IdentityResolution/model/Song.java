@@ -1,7 +1,13 @@
 package com.team5.maven.IdentityResolution.model;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
+import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+
+import org.apache.commons.lang3.StringUtils;
 
 import de.uni_mannheim.informatik.dws.winter.model.AbstractRecord;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
@@ -20,7 +26,7 @@ public class Song extends AbstractRecord<Attribute> implements Serializable {
 	private String genre;
 	private String album;
 	private double duration;
-	private String year;
+	private LocalDateTime year;
 	private String recordlabel;
 	private String producer;
 	private String writer;
@@ -69,11 +75,11 @@ public class Song extends AbstractRecord<Attribute> implements Serializable {
 		this.duration = duration;
 	}
 	
-	public String getYear() {
+	public LocalDateTime getYear() {
 		return year;
 	}
 
-	public void setYear(String year) {
+	public void setYear(LocalDateTime year) {
 		this.year = year;
 	}
 	
@@ -101,6 +107,36 @@ public class Song extends AbstractRecord<Attribute> implements Serializable {
 		this.writer = writer;
 	}
 
+	private Map<Attribute, Collection<String>> provenance = new HashMap<>();
+	private Collection<String> recordProvenance;
+
+	public void setRecordProvenance(Collection<String> provenance) {
+		recordProvenance = provenance;
+	}
+
+	public Collection<String> getRecordProvenance() {
+		return recordProvenance;
+	}
+
+	public void setAttributeProvenance(Attribute attribute,
+			Collection<String> provenance) {
+		this.provenance.put(attribute, provenance);
+	}
+
+	public Collection<String> getAttributeProvenance(String attribute) {
+		return provenance.get(attribute);
+	}
+
+	public String getMergedAttributeProvenance(Attribute attribute) {
+		Collection<String> prov = provenance.get(attribute);
+
+		if (prov != null) {
+			return StringUtils.join(prov, "+");
+		} else {
+			return "";
+		}
+	}	
+	
 	/*
 	 * (non-Javadoc)
 	 * 
