@@ -1,8 +1,13 @@
 package com.team5.maven.IdentityResolution.model;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
+import java.time.temporal.ChronoField;
 import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Locale;
 
 import org.apache.commons.lang3.StringUtils;
 import org.w3c.dom.Node;
@@ -49,7 +54,7 @@ FusibleFactory<Song, Attribute>  {
 		
 		song.setAlbum(getValueFromChildElement(node, "albums"));
 		
-		song.setYear(getValueFromChildElement(node, "years"));
+		//song.setYear(getValueFromChildElement(node, "years"));
 		
 		song.setGenre(getValueFromChildElement(node, "genres"));
 		
@@ -60,6 +65,23 @@ FusibleFactory<Song, Attribute>  {
 		song.setProducer(getValueFromChildElement(node, "producers"));
 		
 		song.setWriter(getValueFromChildElement(node, "writers"));
+		
+		// convert the date string into a DateTime object
+		try {
+			String year = getValueFromChildElement(node, "years");
+			if (year != null && !year.isEmpty()) {
+				DateTimeFormatter formatter = new DateTimeFormatterBuilder()
+				        .appendPattern("yyyy-MM-dd")
+				        .parseDefaulting(ChronoField.CLOCK_HOUR_OF_DAY, 0)
+				        .parseDefaulting(ChronoField.MINUTE_OF_HOUR, 0)
+				        .parseDefaulting(ChronoField.SECOND_OF_MINUTE, 0)
+				        .toFormatter(Locale.ENGLISH);
+				LocalDateTime dt = LocalDateTime.parse(year, formatter);
+				song.setYear(dt);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 
 		// load the list of actors
 //		List<Actor> actors = getObjectListFromChildElement(node, "actors",
