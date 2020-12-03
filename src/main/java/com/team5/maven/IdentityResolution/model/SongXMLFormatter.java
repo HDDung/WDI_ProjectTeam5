@@ -42,27 +42,27 @@ public class SongXMLFormatter extends XMLFormatter<Song> {
 				.getMergedAttributeProvenance(Song.ALBUM), doc));
 		
 		song.appendChild(createTextElementWithProvenance("years",
-				record.getName(),
+				record.getYear(),
 				record.getMergedAttributeProvenance(Song.YEAR), doc));
 		
-		song.appendChild(createTextElementWithProvenance("duration",
-				record.getArtist(),
-				record.getMergedAttributeProvenance(Song.DURATION), doc));
+//		song.appendChild(createTextElementWithProvenance("duration",
+//				record.getDuration(),
+//				record.getMergedAttributeProvenance(Song.DURATION), doc));
 		
 		song.appendChild(createTextElementWithProvenance("genres", record
-				.getAlbum(), record
+				.getGenre(), record
 				.getMergedAttributeProvenance(Song.GENRE), doc));
 		
 		song.appendChild(createTextElementWithProvenance("recordLabel",
-				record.getName(),
+				record.getRecordLabel(),
 				record.getMergedAttributeProvenance(Song.RECORDLABEL), doc));
 		
 		song.appendChild(createTextElementWithProvenance("producers",
-				record.getArtist(),
+				record.getProducer(),
 				record.getMergedAttributeProvenance(Song.PRODUCER), doc));
 		
 		song.appendChild(createTextElementWithProvenance("writers", record
-				.getAlbum(), record
+				.getWriter(), record
 				.getMergedAttributeProvenance(Song.WRITER), doc));
 
 		return song;

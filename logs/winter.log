@@ -2449,3 +2449,113 @@
 [TRACE] 2020-12-01 16:12:43.604 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEvaluator] - Attribute-specific Accuracy:
 [TRACE] 2020-12-01 16:12:43.605 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEvaluator] - 	Name: NaN
 [TRACE] 2020-12-01 16:12:43.606 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEvaluator] - 	Artist: NaN
+[INFO ] 2020-12-01 16:17:59.819 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 11574 elements from dbpedia_translated.xml
+[INFO ] 2020-12-01 16:17:59.949 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0,89
+[INFO ] 2020-12-01 16:17:59.949 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2020-12-01 16:18:00.072 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Name: 1,00
+[INFO ] 2020-12-01 16:18:00.073 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Producer: 1,00
+[INFO ] 2020-12-01 16:18:00.073 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Genre: 1,00
+[INFO ] 2020-12-01 16:18:00.074 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Album: 1,00
+[INFO ] 2020-12-01 16:18:00.075 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Duration: 0,00
+[INFO ] 2020-12-01 16:18:00.076 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	RecordLabel: 1,00
+[INFO ] 2020-12-01 16:18:00.077 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Writer: 1,00
+[INFO ] 2020-12-01 16:18:00.078 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Artist: 1,00
+[INFO ] 2020-12-01 16:18:00.078 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Year: 1,00
+[INFO ] 2020-12-01 16:18:01.201 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 33856 elements from musicbrainz_translated.xml
+[INFO ] 2020-12-01 16:18:01.422 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0,56
+[INFO ] 2020-12-01 16:18:01.422 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2020-12-01 16:18:01.540 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Name: 1,00
+[INFO ] 2020-12-01 16:18:01.542 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Producer: 0,00
+[INFO ] 2020-12-01 16:18:01.542 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Genre: 1,00
+[INFO ] 2020-12-01 16:18:01.543 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Album: 1,00
+[INFO ] 2020-12-01 16:18:01.545 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Duration: 0,00
+[INFO ] 2020-12-01 16:18:01.546 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	RecordLabel: 0,00
+[INFO ] 2020-12-01 16:18:01.547 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Writer: 0,00
+[INFO ] 2020-12-01 16:18:01.547 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Artist: 1,00
+[INFO ] 2020-12-01 16:18:01.548 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Year: 1,00
+[INFO ] 2020-12-01 16:18:01.881 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 20481 elements from spotify_translated.xml
+[INFO ] 2020-12-01 16:18:02.006 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0,33
+[INFO ] 2020-12-01 16:18:02.007 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2020-12-01 16:18:02.125 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Name: 1,00
+[INFO ] 2020-12-01 16:18:02.126 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Producer: 0,00
+[INFO ] 2020-12-01 16:18:02.127 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Genre: 0,00
+[INFO ] 2020-12-01 16:18:02.127 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Album: 0,00
+[INFO ] 2020-12-01 16:18:02.128 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Duration: 0,00
+[INFO ] 2020-12-01 16:18:02.128 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	RecordLabel: 0,00
+[INFO ] 2020-12-01 16:18:02.128 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Writer: 0,00
+[INFO ] 2020-12-01 16:18:02.129 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Artist: 1,00
+[INFO ] 2020-12-01 16:18:02.129 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Year: 1,00
+[INFO ] 2020-12-01 16:18:02.158 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - Group Size Distribtion of 941 groups:
+[INFO ] 2020-12-01 16:18:02.158 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 	Group Size 	| Frequency 
+[INFO ] 2020-12-01 16:18:02.158 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 	————————————————————————————
+[INFO ] 2020-12-01 16:18:02.165 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		2	| 	715
+[INFO ] 2020-12-01 16:18:02.165 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		3	| 	149
+[INFO ] 2020-12-01 16:18:02.167 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		4	| 	50
+[INFO ] 2020-12-01 16:18:02.168 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		5	| 	17
+[INFO ] 2020-12-01 16:18:02.168 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		6	| 	5
+[INFO ] 2020-12-01 16:18:02.168 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		7	| 	3
+[INFO ] 2020-12-01 16:18:02.169 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		9	| 	2
+[ERROR] 2020-12-01 16:18:02.190 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - No elements matching the XPath (/Songs/Song) found in the input file E:\2_Studium\1_Mannheim\3_Semester\Web Data Integration\Project\git\WDI_ProjectTeam5\data\goldstandard\gold.xml
+[INFO ] 2020-12-01 16:18:02.205 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - Attribute Consistencies:
+[INFO ] 2020-12-01 16:18:02.574 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - 	Artist: 0,78
+[INFO ] 2020-12-01 16:18:02.576 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - 	Name: 0,25
+[INFO ] 2020-12-01 16:18:02.941 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionStrategy] - Debug results written to file: data/output/debugResultsDatafusion.csv
+[TRACE] 2020-12-01 16:18:03.254 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEvaluator] - Attribute-specific Accuracy:
+[TRACE] 2020-12-01 16:18:03.256 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEvaluator] - 	Name: NaN
+[TRACE] 2020-12-01 16:18:03.257 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEvaluator] - 	Artist: NaN
+[INFO ] 2020-12-01 16:48:49.850 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 11574 elements from dbpedia_translated.xml
+[INFO ] 2020-12-01 16:48:50.024 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0,89
+[INFO ] 2020-12-01 16:48:50.024 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2020-12-01 16:48:50.080 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Name: 1,00
+[INFO ] 2020-12-01 16:48:50.081 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Producer: 1,00
+[INFO ] 2020-12-01 16:48:50.081 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Genre: 1,00
+[INFO ] 2020-12-01 16:48:50.081 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Album: 1,00
+[INFO ] 2020-12-01 16:48:50.082 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Duration: 0,00
+[INFO ] 2020-12-01 16:48:50.082 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	RecordLabel: 1,00
+[INFO ] 2020-12-01 16:48:50.082 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Writer: 1,00
+[INFO ] 2020-12-01 16:48:50.083 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Artist: 1,00
+[INFO ] 2020-12-01 16:48:50.083 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Year: 1,00
+[INFO ] 2020-12-01 16:48:50.814 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 33856 elements from musicbrainz_translated.xml
+[INFO ] 2020-12-01 16:48:51.000 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0,56
+[INFO ] 2020-12-01 16:48:51.001 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2020-12-01 16:48:51.179 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Name: 1,00
+[INFO ] 2020-12-01 16:48:51.180 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Producer: 0,00
+[INFO ] 2020-12-01 16:48:51.180 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Genre: 1,00
+[INFO ] 2020-12-01 16:48:51.180 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Album: 1,00
+[INFO ] 2020-12-01 16:48:51.180 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Duration: 0,00
+[INFO ] 2020-12-01 16:48:51.181 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	RecordLabel: 0,00
+[INFO ] 2020-12-01 16:48:51.181 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Writer: 0,00
+[INFO ] 2020-12-01 16:48:51.181 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Artist: 1,00
+[INFO ] 2020-12-01 16:48:51.182 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Year: 1,00
+[INFO ] 2020-12-01 16:48:51.485 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 20481 elements from spotify_translated.xml
+[INFO ] 2020-12-01 16:48:51.582 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0,33
+[INFO ] 2020-12-01 16:48:51.583 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2020-12-01 16:48:51.644 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Name: 1,00
+[INFO ] 2020-12-01 16:48:51.644 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Producer: 0,00
+[INFO ] 2020-12-01 16:48:51.644 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Genre: 0,00
+[INFO ] 2020-12-01 16:48:51.645 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Album: 0,00
+[INFO ] 2020-12-01 16:48:51.645 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Duration: 0,00
+[INFO ] 2020-12-01 16:48:51.645 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	RecordLabel: 0,00
+[INFO ] 2020-12-01 16:48:51.646 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Writer: 0,00
+[INFO ] 2020-12-01 16:48:51.646 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Artist: 1,00
+[INFO ] 2020-12-01 16:48:51.646 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Year: 1,00
+[INFO ] 2020-12-01 16:48:51.668 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - Group Size Distribtion of 941 groups:
+[INFO ] 2020-12-01 16:48:51.668 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 	Group Size 	| Frequency 
+[INFO ] 2020-12-01 16:48:51.668 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 	————————————————————————————
+[INFO ] 2020-12-01 16:48:51.670 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		2	| 	715
+[INFO ] 2020-12-01 16:48:51.671 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		3	| 	149
+[INFO ] 2020-12-01 16:48:51.671 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		4	| 	50
+[INFO ] 2020-12-01 16:48:51.671 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		5	| 	17
+[INFO ] 2020-12-01 16:48:51.671 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		6	| 	5
+[INFO ] 2020-12-01 16:48:51.671 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		7	| 	3
+[INFO ] 2020-12-01 16:48:51.672 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		9	| 	2
+[ERROR] 2020-12-01 16:48:51.681 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - No elements matching the XPath (/Songs/Song) found in the input file E:\2_Studium\1_Mannheim\3_Semester\Web Data Integration\Project\git\WDI_ProjectTeam5\data\goldstandard\gold.xml
+[INFO ] 2020-12-01 16:48:51.688 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - Attribute Consistencies:
+[INFO ] 2020-12-01 16:48:51.910 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - 	Artist: 0,78
+[INFO ] 2020-12-01 16:48:51.911 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - 	Album: 0,65
+[INFO ] 2020-12-01 16:48:51.912 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - 	Name: 0,25
+[INFO ] 2020-12-01 16:48:52.295 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionStrategy] - Debug results written to file: data/output/debugResultsDatafusion.csv
+[TRACE] 2020-12-01 16:48:52.496 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEvaluator] - Attribute-specific Accuracy:
+[TRACE] 2020-12-01 16:48:52.497 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEvaluator] - 	Name: NaN
+[TRACE] 2020-12-01 16:48:52.498 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEvaluator] - 	Album: NaN
+[TRACE] 2020-12-01 16:48:52.498 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEvaluator] - 	Artist: NaN

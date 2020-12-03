@@ -1,17 +1,14 @@
 package com.team5.maven.DataFusion;
 
 import java.io.File;
-import java.time.LocalDateTime;
-import java.time.format.DateTimeFormatter;
-import java.time.format.DateTimeFormatterBuilder;
-import java.time.temporal.ChronoField;
-import java.util.Locale;
 
 //import org.apache.logging.log4j.Logger;
 import org.slf4j.Logger;
 
+import com.team5.maven.DataFusion.evaluation.AlbumEvaluationRule;
 import com.team5.maven.DataFusion.evaluation.ArtistEvaluationRule;
 import com.team5.maven.DataFusion.evaluation.NameEvaluationRule;
+import com.team5.maven.DataFusion.fusers.AlbumFuserLongestString;
 import com.team5.maven.DataFusion.fusers.ArtistFuserLongestString;
 import com.team5.maven.DataFusion.fusers.NameFuserLongestString;
 import com.team5.maven.IdentityResolution.model.Song;
@@ -106,9 +103,14 @@ public class DataFusion_Main
 		// add attribute fusers
 		strategy.addAttributeFuser(Song.NAME, new NameFuserLongestString(),new NameEvaluationRule());
 		strategy.addAttributeFuser(Song.ARTIST,new ArtistFuserLongestString(), new ArtistEvaluationRule());
-		//strategy.addAttributeFuser(Song.ALBUM, new DateFuserFavourSource(),new DateEvaluationRule());
+		strategy.addAttributeFuser(Song.ALBUM, new AlbumFuserLongestString(),new AlbumEvaluationRule());
 		//strategy.addAttributeFuser(Song.YEAR, new DateFuserFavourSource(),new DateEvaluationRule());
 		//strategy.addAttributeFuser(Song.DURATION,new ActorsFuserUnion(),new ActorsEvaluationRule());
+		//strategy.addAttributeFuser(Song.ALBUM, new DateFuserFavourSource(),new DateEvaluationRule());
+		//strategy.addAttributeFuser(Song.GENRE, new DateFuserFavourSource(),new DateEvaluationRule());
+		//strategy.addAttributeFuser(Song.RECORDLABEL,new ActorsFuserUnion(),new ActorsEvaluationRule());
+		//strategy.addAttributeFuser(Song.PRODUCER, new DateFuserFavourSource(),new DateEvaluationRule());
+		//strategy.addAttributeFuser(Song.WRITER, new DateFuserFavourSource(),new DateEvaluationRule());
 		
 		// create the fusion engine
 		DataFusionEngine<Song, Attribute> engine = new DataFusionEngine<>(strategy);
