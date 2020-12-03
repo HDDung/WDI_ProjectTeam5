@@ -7,10 +7,18 @@ import org.slf4j.Logger;
 
 import com.team5.maven.DataFusion.evaluation.AlbumEvaluationRule;
 import com.team5.maven.DataFusion.evaluation.ArtistEvaluationRule;
+import com.team5.maven.DataFusion.evaluation.GenreEvaluationRule;
 import com.team5.maven.DataFusion.evaluation.NameEvaluationRule;
+import com.team5.maven.DataFusion.evaluation.ProducerEvaluationRule;
+import com.team5.maven.DataFusion.evaluation.RecordLabelEvaluationRule;
+import com.team5.maven.DataFusion.evaluation.WriterEvaluationRule;
 import com.team5.maven.DataFusion.fusers.AlbumFuserLongestString;
 import com.team5.maven.DataFusion.fusers.ArtistFuserLongestString;
+import com.team5.maven.DataFusion.fusers.GenreFuserLongestString;
 import com.team5.maven.DataFusion.fusers.NameFuserLongestString;
+import com.team5.maven.DataFusion.fusers.ProducerFuserLongestString;
+import com.team5.maven.DataFusion.fusers.RecordLabelFuserLongestString;
+import com.team5.maven.DataFusion.fusers.WriterFuserLongestString;
 import com.team5.maven.IdentityResolution.model.Song;
 import com.team5.maven.IdentityResolution.model.SongXMLFormatter;
 import com.team5.maven.IdentityResolution.model.SongXMLReader;
@@ -81,7 +89,8 @@ public class DataFusion_Main
 		System.out.println("*\n*\tLoading correspondences\n*");
 		CorrespondenceSet<Song, Attribute> correspondences = new CorrespondenceSet<>();
 		correspondences.loadCorrespondences(new File("data/output/dbpedia_musicbrainz_correspondences.csv"),ds1, ds2);
-		//correspondences.loadCorrespondences(new File("data/correspondences/actors_2_golden_globes_correspondences.csv"),ds2, ds3);
+		correspondences.loadCorrespondences(new File("data/output/dbpedia_spotify_correspondences.csv"),ds1, ds3);
+		correspondences.loadCorrespondences(new File("data/output/spotify_musicbrainz_correspondences.csv"),ds3, ds2);
 
 		// write group size distribution
 		correspondences.printGroupSizeDistribution();
@@ -89,7 +98,7 @@ public class DataFusion_Main
 		// load the gold standard
 		System.out.println("*\n*\tEvaluating results\n*");
 		DataSet<Song, Attribute> gs = new FusibleHashedDataSet<>();
-		new SongXMLReader().loadFromXML(new File("data/goldstandard/gold.xml"), "/Songs/Song", gs);
+		new SongXMLReader().loadFromXML(new File("data/goldstandard/gold.xml"), "/songs/song", gs);
 
 		for(Song m : gs.get()) {
 			System.out.println(String.format("gs: %s", m.getIdentifier()));
@@ -104,13 +113,12 @@ public class DataFusion_Main
 		strategy.addAttributeFuser(Song.NAME, new NameFuserLongestString(),new NameEvaluationRule());
 		strategy.addAttributeFuser(Song.ARTIST,new ArtistFuserLongestString(), new ArtistEvaluationRule());
 		strategy.addAttributeFuser(Song.ALBUM, new AlbumFuserLongestString(),new AlbumEvaluationRule());
-		//strategy.addAttributeFuser(Song.YEAR, new DateFuserFavourSource(),new DateEvaluationRule());
-		//strategy.addAttributeFuser(Song.DURATION,new ActorsFuserUnion(),new ActorsEvaluationRule());
-		//strategy.addAttributeFuser(Song.ALBUM, new DateFuserFavourSource(),new DateEvaluationRule());
-		//strategy.addAttributeFuser(Song.GENRE, new DateFuserFavourSource(),new DateEvaluationRule());
-		//strategy.addAttributeFuser(Song.RECORDLABEL,new ActorsFuserUnion(),new ActorsEvaluationRule());
-		//strategy.addAttributeFuser(Song.PRODUCER, new DateFuserFavourSource(),new DateEvaluationRule());
-		//strategy.addAttributeFuser(Song.WRITER, new DateFuserFavourSource(),new DateEvaluationRule());
+		strategy.addAttributeFuser(Song.GENRE, new GenreFuserLongestString(),new GenreEvaluationRule());
+		//strategy.addAttributeFuser(Song.YEAR, new YearFuserFavourSource(),new YearEvaluationRule());
+		//strategy.addAttributeFuser(Song.DURATION,new DurationFuserUnion(),new DurationEvaluationRule());
+		strategy.addAttributeFuser(Song.RECORDLABEL,new RecordLabelFuserLongestString(),new RecordLabelEvaluationRule());
+		strategy.addAttributeFuser(Song.PRODUCER, new ProducerFuserLongestString(),new ProducerEvaluationRule());
+		strategy.addAttributeFuser(Song.WRITER, new WriterFuserLongestString(),new WriterEvaluationRule());
 		
 		// create the fusion engine
 		DataFusionEngine<Song, Attribute> engine = new DataFusionEngine<>(strategy);
