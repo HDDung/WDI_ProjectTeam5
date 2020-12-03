@@ -1,6 +1,7 @@
 package com.team5.maven.IdentityResolution.model;
 
 import java.io.Serializable;
+import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.List;
@@ -25,7 +26,7 @@ public class Song extends AbstractRecord<Attribute> implements Serializable {
 	private String genre;
 	private String album;
 	private double duration;
-	private String year;
+	private LocalDateTime year;
 	private String recordlabel;
 	private String producer;
 	private String writer;
@@ -74,11 +75,11 @@ public class Song extends AbstractRecord<Attribute> implements Serializable {
 		this.duration = duration;
 	}
 	
-	public String getYear() {
+	public LocalDateTime getYear() {
 		return year;
 	}
 
-	public void setYear(String year) {
+	public void setYear(LocalDateTime year) {
 		this.year = year;
 	}
 	

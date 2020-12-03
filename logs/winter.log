@@ -2231,6 +2231,8 @@
 [TRACE] 2020-11-30 20:19:30.938 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] dbpedia_10742,musicbrainz_26583,0.961764705882353
 [TRACE] 2020-11-30 20:19:30.938 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] dbpedia_2241,musicbrainz_4734
 [TRACE] 2020-11-30 20:19:30.939 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] dbpedia_9316,musicbrainz_23971
+<<<<<<< HEAD
+=======
 [INFO ] 2020-11-30 22:07:24.997 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 11574 elements from dbpedia_translated.xml
 [INFO ] 2020-11-30 22:07:25.117 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0,60
 [INFO ] 2020-11-30 22:07:25.118 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
@@ -2449,6 +2451,7 @@
 [TRACE] 2020-12-01 16:12:43.604 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEvaluator] - Attribute-specific Accuracy:
 [TRACE] 2020-12-01 16:12:43.605 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEvaluator] - 	Name: NaN
 [TRACE] 2020-12-01 16:12:43.606 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEvaluator] - 	Artist: NaN
+<<<<<<< HEAD
 [INFO ] 2020-12-01 16:17:59.819 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 11574 elements from dbpedia_translated.xml
 [INFO ] 2020-12-01 16:17:59.949 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0,89
 [INFO ] 2020-12-01 16:17:59.949 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
@@ -2559,3 +2562,6 @@
 [TRACE] 2020-12-01 16:48:52.497 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEvaluator] - 	Name: NaN
 [TRACE] 2020-12-01 16:48:52.498 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEvaluator] - 	Album: NaN
 [TRACE] 2020-12-01 16:48:52.498 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEvaluator] - 	Artist: NaN
+=======
+>>>>>>> 22ad34c48c5988dbfaaf4bdbf0f4b4a61f890d63
+>>>>>>> 0ce055ce882af2c35a21d37f89dfb56c1b175e47
