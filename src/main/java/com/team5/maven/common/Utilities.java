@@ -7,3 +7,4 @@ public final class Utilities {
 	    return Jsoup.parse(html).text().replace("&", ",");
 	}
 }
+	
