@@ -4,6 +4,7 @@ import org.jsoup.Jsoup;
 
 public final class Utilities {
 	public static String html2text(String html) {
-	    return Jsoup.parse(html).text().replace("&", "and");
+	    return Jsoup.parse(html).text().replace("&", ",");
 	}
 }
+	
