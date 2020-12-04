@@ -67,7 +67,7 @@ public class UnionFavourSpotify<ValueType, RecordType extends Matchable & Fusibl
 			return fused;
 		} 
 		
-		// Choose from Spotify
+		// Choose from Spotify - if don't have Spotify, take the fist one.
 		DateTimeFormatter formatter = new DateTimeFormatterBuilder()
 		        .appendPattern("yyyy-MM-dd")
 		        .parseDefaulting(ChronoField.CLOCK_HOUR_OF_DAY, 0)
