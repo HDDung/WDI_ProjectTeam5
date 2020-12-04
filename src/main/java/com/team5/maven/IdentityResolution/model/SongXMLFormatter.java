@@ -41,9 +41,9 @@ public class SongXMLFormatter extends XMLFormatter<Song> {
 				.getAlbum(), record
 				.getMergedAttributeProvenance(Song.ALBUM), doc));
 		
-		song.appendChild(createTextElementWithProvenance("years",
-				record.getYear(),
-				record.getMergedAttributeProvenance(Song.YEAR), doc));
+//		song.appendChild(createTextElementWithProvenance("years",
+//				record.getYear(),
+//				record.getMergedAttributeProvenance(Song.YEAR), doc));
 		
 		song.appendChild(createTextElementWithProvenance("duration",
 				String.valueOf(record.getDuration()),
