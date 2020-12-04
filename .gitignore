@@ -1,1 +1,16 @@
 /target/
+data/goldstandard/gs_spotify_dbpedia_note.txt
+data/goldstandard/Gs_spotify_Dbpedia.xlsx
+data/output/debugResultsBlocking_spotify_dbpedia.csv
+data/output/debugResultsDatafusion.csv
+data/output/debugResultsMatchingRule_spotify_dbpedia.csv
+data/output/debugResultsMatchingRule_spotify_dbpedia.csv_short
+logs/winter.log
+schema/dbpedia/desktop.ini
+schema/musicbrainz/desktop.ini
+schema/spotify/desktop.ini
+src/main/java/com/team5/maven/DataFusion/desktop.ini
+src/main/java/com/team5/maven/DataFusion/evaluation/desktop.ini
+src/main/java/com/team5/maven/DataFusion/fusers/desktop.ini
+src/main/java/com/team5/maven/DataFusion/fusers/utility/desktop.ini
+.gitignore

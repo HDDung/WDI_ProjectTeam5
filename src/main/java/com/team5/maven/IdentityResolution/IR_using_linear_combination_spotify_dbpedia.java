@@ -10,6 +10,8 @@ import com.team5.maven.IdentityResolution.comparators.SongArtistCustomizedCompar
 import com.team5.maven.IdentityResolution.comparators.SongArtistsComparatorToken;
 import com.team5.maven.IdentityResolution.comparators.SongNameComparatorEqual;
 import com.team5.maven.IdentityResolution.comparators.SongNameComparatorLevenshtein;
+import com.team5.maven.IdentityResolution.comparators.SongNameComparatorRemoveBrackets;
+import com.team5.maven.IdentityResolution.comparators.SongNameComparatorRemoveBracketsAndDash;
 import com.team5.maven.IdentityResolution.comparators.SongNameComparatorTokenJaccard;
 import com.team5.maven.IdentityResolution.model.Song;
 import com.team5.maven.IdentityResolution.model.SongXMLReader;
@@ -30,7 +32,7 @@ import de.uni_mannheim.informatik.dws.winter.utils.WinterLogManager;
 
 public class IR_using_linear_combination_spotify_dbpedia {
 
-	private static final Logger logger = WinterLogManager.activateLogger("default");
+	private static final Logger logger = WinterLogManager.activateLogger("traceFile");
 	
     public static void main( String[] args ) throws Exception
     { 
@@ -51,10 +53,10 @@ public class IR_using_linear_combination_spotify_dbpedia {
 		// create a matching rule
 		LinearCombinationMatchingRule<Song, Attribute> matchingRule = new LinearCombinationMatchingRule<>(
 				0.7);
-		matchingRule.activateDebugReport("data/output/debugResultsMatchingRule_spotify_dbpedia.csv", 1000, gsTest);
+		matchingRule.activateDebugReport("data/output/debugResultsMatchingRule_spotify_dbpedia.csv", 10000, gsTest);
 		
 		// add comparators
-		matchingRule.addComparator(new SongNameComparatorTokenJaccard(), 0.6);
+		matchingRule.addComparator(new SongNameComparatorRemoveBracketsAndDash(), 0.6);
 		matchingRule.addComparator(new SongArtistCustomizedComparator(), 0.4);
 		
 
@@ -94,7 +96,7 @@ public class IR_using_linear_combination_spotify_dbpedia {
 
 		// print the evaluation result
 		System.out.println(""
-				+ "Spotify <-> Musicbrainz");
+				+ "Spotify <-> Dbpedia");
 		System.out.println(String.format(
 				"Precision: %.4f",perfTest.getPrecision()));
 		System.out.println(String.format(

@@ -5,6 +5,9 @@ dbpedia_543	spotify_3864: same lyric but different gener
 dbpedia_2978	spotify_12694: Soundtrack vs original
 dbpedia_2117	spotify_16139
 
+1-82: smaller than 0.7
+
+Question: if a name of artist appear in boths, should consider as a same or different
 
 
 

@@ -25,7 +25,7 @@ public class Song extends AbstractRecord<Attribute> implements Serializable {
 	private String artist;
 	private String genre;
 	private String album;
-	private double duration;
+	private Double duration;
 	private LocalDateTime year;
 	private String recordlabel;
 	private String producer;
@@ -67,11 +67,11 @@ public class Song extends AbstractRecord<Attribute> implements Serializable {
 		this.album = album;
 	}
 	
-	public double getDuration() {
+	public Double getDuration() {
 		return duration;
 	}
 
-	public void setDuration(double duration) {
+	public void setDuration(Double duration) {
 		this.duration = duration;
 	}
 	
