@@ -40,6 +40,10 @@ FusibleFactory<Song, Attribute>  {
 		
 	}
 	
+	private static double parseStringToDouble(String value, double defaultValue) {
+	    return value == null || value.isEmpty() ? defaultValue : Double.parseDouble(value);
+	}
+	
 	@Override
 	public Song createModelFromElement(Node node, String provenanceInfo) {
 		String id = getValueFromChildElement(node, "id");
@@ -54,11 +58,9 @@ FusibleFactory<Song, Attribute>  {
 		
 		song.setAlbum(getValueFromChildElement(node, "albums"));
 		
-		//song.setYear(getValueFromChildElement(node, "years"));
-		
 		song.setGenre(getValueFromChildElement(node, "genres"));
 		
-		//song.setDuration(Double.parseDouble(getValueFromChildElement(node, "duration")));
+		song.setDuration(parseStringToDouble(getValueFromChildElement(node, "duration"), -1));
 		
 		song.setRecordLabel(getValueFromChildElement(node, "recordLabel"));
 		
@@ -82,11 +84,6 @@ FusibleFactory<Song, Attribute>  {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
-		// load the list of actors
-//		List<Actor> actors = getObjectListFromChildElement(node, "actors",
-//				"actor", new ActorXMLReader(), provenanceInfo);
-//		movie.setActors(actors);
 
 		return song;
 	}

@@ -25,7 +25,7 @@ public class Song extends AbstractRecord<Attribute> implements Serializable {
 	private String artist;
 	private String genre;
 	private String album;
-	private double duration;
+	private Double duration;
 	private LocalDateTime year;
 	private String recordlabel;
 	private String producer;
@@ -67,11 +67,11 @@ public class Song extends AbstractRecord<Attribute> implements Serializable {
 		this.album = album;
 	}
 	
-	public double getDuration() {
+	public Double getDuration() {
 		return duration;
 	}
 
-	public void setDuration(double duration) {
+	public void setDuration(Double duration) {
 		this.duration = duration;
 	}
 	
@@ -186,23 +186,23 @@ public class Song extends AbstractRecord<Attribute> implements Serializable {
 	@Override
 	public boolean hasValue(Attribute attribute) {
 		if(attribute==NAME)
-			return name!=null;
+			return name!=null && !getName().isEmpty();
 		else if(attribute==ARTIST) 
-			return artist!=null;
+			return artist!=null && !getArtist().isEmpty();
 		else if(attribute==GENRE)
-			return genre!=null;
+			return genre!=null && !getGenre().isEmpty();
 		else if(attribute==ALBUM) 
-			return album!=null;
+			return album!=null && !getAlbum().isEmpty();
 		else if(attribute==DURATION)
-			return duration!=0;
+			return duration!=0 && duration!=-1;
 		else if(attribute==YEAR) 
 			return year!=null;
 		else if(attribute==RECORDLABEL)
-			return recordlabel!=null;
+			return recordlabel!=null && !getName().isEmpty();
 		else if(attribute==PRODUCER) 
-			return producer!=null;
+			return producer!=null && !getName().isEmpty();
 		else if(attribute==WRITER)
-			return writer!=null;
+			return writer!=null && !getName().isEmpty();
 		return false;
 	}
 }
