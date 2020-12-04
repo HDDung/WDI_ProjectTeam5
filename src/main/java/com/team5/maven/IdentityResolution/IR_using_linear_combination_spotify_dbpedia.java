@@ -52,8 +52,8 @@ public class IR_using_linear_combination_spotify_dbpedia {
 
 		// create a matching rule
 		LinearCombinationMatchingRule<Song, Attribute> matchingRule = new LinearCombinationMatchingRule<>(
-				0.65);
-		matchingRule.activateDebugReport("data/output/debugResultsMatchingRule_spotify_dbpedia.csv", 1000, gsTest);
+				0.7);
+		matchingRule.activateDebugReport("data/output/debugResultsMatchingRule_spotify_dbpedia.csv", 10000, gsTest);
 		
 		// add comparators
 		matchingRule.addComparator(new SongNameComparatorRemoveBracketsAndDash(), 0.6);
@@ -96,7 +96,7 @@ public class IR_using_linear_combination_spotify_dbpedia {
 
 		// print the evaluation result
 		System.out.println(""
-				+ "Spotify <-> Musicbrainz");
+				+ "Spotify <-> Dbpedia");
 		System.out.println(String.format(
 				"Precision: %.4f",perfTest.getPrecision()));
 		System.out.println(String.format(
