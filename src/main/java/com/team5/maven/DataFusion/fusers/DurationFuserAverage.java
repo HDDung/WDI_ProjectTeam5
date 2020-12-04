@@ -11,10 +11,10 @@ import de.uni_mannheim.informatik.dws.winter.model.RecordGroup;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.processing.Processable;
 
-public class DurationFuserAvg extends
+public class DurationFuserAverage extends
 		AttributeValueFuser<Double, Song, Attribute>{
 
-	public DurationFuserAvg() {
+	public DurationFuserAverage() {
 		super(new ModifiedAverage<Song, Attribute>());
 	}
 

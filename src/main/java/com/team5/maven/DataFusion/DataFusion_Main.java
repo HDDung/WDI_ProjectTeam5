@@ -16,7 +16,7 @@ import com.team5.maven.DataFusion.evaluation.WriterEvaluationRule;
 import com.team5.maven.DataFusion.evaluation.YearEvaluationRule;
 import com.team5.maven.DataFusion.fusers.AlbumFuserLongestString;
 import com.team5.maven.DataFusion.fusers.ArtistFuserLongestString;
-import com.team5.maven.DataFusion.fusers.DurationFuserAvg;
+import com.team5.maven.DataFusion.fusers.DurationFuserAverage;
 import com.team5.maven.DataFusion.fusers.GenreFuserLongestString;
 import com.team5.maven.DataFusion.fusers.NameFuserLongestString;
 import com.team5.maven.DataFusion.fusers.ProducerFuserLongestString;
@@ -119,7 +119,7 @@ public class DataFusion_Main
 		strategy.addAttributeFuser(Song.ALBUM, new AlbumFuserLongestString(),new AlbumEvaluationRule());
 		strategy.addAttributeFuser(Song.GENRE, new GenreFuserLongestString(),new GenreEvaluationRule());
 		strategy.addAttributeFuser(Song.YEAR, new YearFuserVoting(),new YearEvaluationRule());
-		strategy.addAttributeFuser(Song.DURATION,new DurationFuserAvg(),new DurationEvaluationRule());
+		strategy.addAttributeFuser(Song.DURATION,new DurationFuserAverage(),new DurationEvaluationRule());
 		strategy.addAttributeFuser(Song.RECORDLABEL,new RecordLabelFuserLongestString(),new RecordLabelEvaluationRule());
 		strategy.addAttributeFuser(Song.PRODUCER, new ProducerFuserLongestString(),new ProducerEvaluationRule());
 		strategy.addAttributeFuser(Song.WRITER, new WriterFuserLongestString(),new WriterEvaluationRule());
