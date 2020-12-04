@@ -13,6 +13,7 @@ import com.team5.maven.DataFusion.evaluation.NameEvaluationRule;
 import com.team5.maven.DataFusion.evaluation.ProducerEvaluationRule;
 import com.team5.maven.DataFusion.evaluation.RecordLabelEvaluationRule;
 import com.team5.maven.DataFusion.evaluation.WriterEvaluationRule;
+import com.team5.maven.DataFusion.evaluation.YearEvaluationRule;
 import com.team5.maven.DataFusion.fusers.AlbumFuserLongestString;
 import com.team5.maven.DataFusion.fusers.ArtistFuserLongestString;
 import com.team5.maven.DataFusion.fusers.DurationFuserAvg;
@@ -21,6 +22,7 @@ import com.team5.maven.DataFusion.fusers.NameFuserLongestString;
 import com.team5.maven.DataFusion.fusers.ProducerFuserLongestString;
 import com.team5.maven.DataFusion.fusers.RecordLabelFuserLongestString;
 import com.team5.maven.DataFusion.fusers.WriterFuserLongestString;
+import com.team5.maven.DataFusion.fusers.YearFuserVoting;
 import com.team5.maven.IdentityResolution.model.Song;
 import com.team5.maven.IdentityResolution.model.SongXMLFormatter;
 import com.team5.maven.IdentityResolution.model.SongXMLReader;
@@ -49,7 +51,7 @@ public class DataFusion_Main
 	 * activate the "traceFile" logger as follows:
 	 *     private static final Logger logger = WinterLogManager.activateLogger("traceFile");
 	 *
-	 */
+	 */ 
 
 	private static final Logger logger = WinterLogManager.activateLogger("traceFile");
 	
@@ -116,7 +118,7 @@ public class DataFusion_Main
 		strategy.addAttributeFuser(Song.ARTIST,new ArtistFuserLongestString(), new ArtistEvaluationRule());
 		strategy.addAttributeFuser(Song.ALBUM, new AlbumFuserLongestString(),new AlbumEvaluationRule());
 		strategy.addAttributeFuser(Song.GENRE, new GenreFuserLongestString(),new GenreEvaluationRule());
-		//strategy.addAttributeFuser(Song.YEAR, new YearFuserFavourSource(),new YearEvaluationRule());
+		strategy.addAttributeFuser(Song.YEAR, new YearFuserVoting(),new YearEvaluationRule());
 		strategy.addAttributeFuser(Song.DURATION,new DurationFuserAvg(),new DurationEvaluationRule());
 		strategy.addAttributeFuser(Song.RECORDLABEL,new RecordLabelFuserLongestString(),new RecordLabelEvaluationRule());
 		strategy.addAttributeFuser(Song.PRODUCER, new ProducerFuserLongestString(),new ProducerEvaluationRule());

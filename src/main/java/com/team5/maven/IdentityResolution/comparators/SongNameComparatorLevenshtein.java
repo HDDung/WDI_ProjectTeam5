@@ -25,8 +25,8 @@ public class SongNameComparatorLevenshtein implements Comparator<Song, Attribute
 			Correspondence<Attribute, Matchable> schemaCorrespondences) {
 		
 		//Preprocessing: Remove everything in brackets
-    	String s1 = record1.getName().replaceAll("\\(.*\\)", "").replaceAll("(-.*)", "");
-		String s2 = record2.getName().replaceAll("\\(.*\\)", "").replaceAll("(-.*)", "");
+    	String s1 = record1.getName();
+		String s2 = record2.getName();
     	
     	double similarity = sim.calculate(s1, s2);
     	

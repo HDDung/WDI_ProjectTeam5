@@ -2565,3 +2565,795 @@
 =======
 >>>>>>> 22ad34c48c5988dbfaaf4bdbf0f4b4a61f890d63
 >>>>>>> 0ce055ce882af2c35a21d37f89dfb56c1b175e47
+[INFO ] 2020-12-03 23:34:56.349 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 20481 elements from spotify_translated.xml
+[INFO ] 2020-12-03 23:34:57.169 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 33856 elements from musicbrainz_translated.xml
+[INFO ] 2020-12-03 23:34:57.282 [de.uni_mannheim.informatik.dws.winter.model.MatchingGoldStandard] - The gold standard has 227 examples
+[INFO ] 2020-12-03 23:34:57.283 [de.uni_mannheim.informatik.dws.winter.model.MatchingGoldStandard] - 	76 positive examples (33.48%)
+[INFO ] 2020-12-03 23:34:57.284 [de.uni_mannheim.informatik.dws.winter.model.MatchingGoldStandard] - 	151 negative examples (66.52%)
+[INFO ] 2020-12-03 23:34:57.302 [de.uni_mannheim.informatik.dws.winter.matching.algorithms.RuleBasedMatchingAlgorithm] - Starting Identity Resolution
+[INFO ] 2020-12-03 23:34:57.304 [de.uni_mannheim.informatik.dws.winter.matching.algorithms.RuleBasedMatchingAlgorithm] - Blocking 20,481 x 33,856 elements
+[TRACE] 2020-12-03 23:34:57.305 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - Creating blocking key values for dataset1: 20481 records
+[TRACE] 2020-12-03 23:34:57.458 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - Creating blocking key values for dataset2: 33856 records
+[INFO ] 2020-12-03 23:34:57.652 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - created 638 blocking keys for first dataset
+[INFO ] 2020-12-03 23:34:57.654 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - created 762 blocking keys for second dataset
+[TRACE] 2020-12-03 23:34:57.654 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - Joining blocking key values: 638 x 762 blocks
+[INFO ] 2020-12-03 23:34:57.658 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - created 386 blocks from blocking keys
+[TRACE] 2020-12-03 23:34:57.662 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - Block size distribution:
+[TRACE] 2020-12-03 23:34:57.678 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - Frequency        Element
+43               1
+33               2
+13               6
+11               4
+9                3
+9                8
+9                12
+7                9
+6                20
+4                15
+3                5
+3                10
+3                24
+3                25
+3                32
+3                36
+3                42
+3                48
+3                80
+2                14
+2                16
+2                22
+2                27
+2                50
+2                55
+2                63
+2                104
+2                399
+2                760
+2                1860
+2                2016
+1                7
+1                11
+1                18
+1                21
+1                28
+1                30
+1                35
+1                38
+1                40
+1                44
+1                45
+1                56
+1                75
+1                76
+1                90
+1                91
+1                96
+1                108
+1                112
+1                121
+1                135
+1                144
+1                170
+1                184
+1                192
+1                203
+1                204
+1                221
+1                230
+1                325
+1                336
+1                396
+1                418
+1                481
+1                496
+1                504
+1                527
+1                540
+1                560
+1                575
+1                585
+1                595
+1                598
+1                627
+1                645
+1                703
+1                740
+1                759
+1                775
+1                779
+1                864
+1                969
+1                1000
+1                1008
+1                1056
+1                1218
+1                1258
+1                1269
+1                1272
+1                1316
+1                1320
+1                1350
+1                1400
+1                1450
+1                1452
+1                1512
+1                1525
+1                1696
+1                1891
+1                1944
+1                1960
+1                2100
+1                2332
+1                2414
+1                2418
+1                2444
+1                2478
+1                2585
+1                2695
+1                2730
+1                2745
+1                2937
+1                3136
+1                3440
+1                3552
+1                3784
+1                3916
+1                4002
+1                4080
+1                4484
+1                4730
+1                4823
+1                4830
+1                4914
+1                5151
+1                5180
+1                5340
+1                5456
+1                5544
+1                6324
+1                6440
+1                6798
+1                7245
+1                7918
+1                8282
+1                8814
+1                8844
+1                8848
+1                8946
+1                9030
+1                9632
+1                9652
+1                10240
+1                11172
+1                11352
+1                11840
+1                12136
+1                13568
+1                13622
+1                13706
+1                14345
+1                15288
+1                15458
+1                15480
+1                16867
+1                17472
+1                18161
+1                18400
+1                20165
+1                20224
+1                20628
+1                21534
+1                21576
+1                21708
+1                22018
+1                22035
+1                24366
+1                26026
+1                28350
+1                28424
+1                28905
+1                29393
+1                30008
+1                30208
+1                30388
+1                30814
+1                32835
+1                33000
+1                33135
+1                36162
+1                36936
+1                37584
+1                40000
+1                40296
+1                41291
+1                43489
+1                43911
+1                43925
+1                46200
+1                49735
+1                53111
+1                53669
+1                54280
+1                54575
+1                57716
+1                59210
+1                60788
+1                61152
+1                78804
+1                78848
+1                81972
+1                83759
+1                85505
+1                88320
+1                90774
+1                91620
+1                94017
+1                94248
+1                99552
+1                102666
+1                103448
+1                107531
+1                108181
+1                109940
+1                116480
+1                140030
+1                143028
+1                156822
+1                199980
+1                230580
+1                1946212
+
+[TRACE] 2020-12-03 23:34:57.685 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - Blocking key values:
+[TRACE] 2020-12-03 23:34:57.686 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - BlockingKeyValue	Frequency
+[TRACE] 2020-12-03 23:34:57.688 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - TH			1946212
+[TRACE] 2020-12-03 23:34:57.688 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - WH			230580
+[TRACE] 2020-12-03 23:34:57.688 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - LO			199980
+[TRACE] 2020-12-03 23:34:57.688 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - CO			156822
+[TRACE] 2020-12-03 23:34:57.689 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - ST			143028
+[TRACE] 2020-12-03 23:34:57.689 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - NO			140030
+[TRACE] 2020-12-03 23:34:57.689 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - SO			116480
+[TRACE] 2020-12-03 23:34:57.689 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - LI			109940
+[TRACE] 2020-12-03 23:34:57.690 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - HE			108181
+[TRACE] 2020-12-03 23:34:57.690 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - CA			107531
+[TRACE] 2020-12-03 23:34:57.690 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - AL			103448
+[TRACE] 2020-12-03 23:34:57.690 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - YO			102666
+[TRACE] 2020-12-03 23:34:57.691 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - DO			99552
+[TRACE] 2020-12-03 23:34:57.691 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - HO			94248
+[TRACE] 2020-12-03 23:34:57.691 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - BE			94017
+[TRACE] 2020-12-03 23:34:57.691 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - IN			91620
+[TRACE] 2020-12-03 23:34:57.692 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - GO			90774
+[TRACE] 2020-12-03 23:34:57.692 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - RE			88320
+[TRACE] 2020-12-03 23:34:57.692 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - BA			85505
+[TRACE] 2020-12-03 23:34:57.692 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - WA			83759
+[TRACE] 2020-12-03 23:34:57.693 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - MA			81972
+[TRACE] 2020-12-03 23:34:57.693 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - SH			78848
+[TRACE] 2020-12-03 23:34:57.693 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - DE			78804
+[TRACE] 2020-12-03 23:34:57.693 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - LA			61152
+[TRACE] 2020-12-03 23:34:57.694 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - BL			60788
+[TRACE] 2020-12-03 23:34:57.694 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - MO			59210
+[TRACE] 2020-12-03 23:34:57.694 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - LE			57716
+[TRACE] 2020-12-03 23:34:57.695 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - SA			54575
+[TRACE] 2020-12-03 23:34:57.695 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - HA			54280
+[TRACE] 2020-12-03 23:34:57.695 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - SU			53669
+[TRACE] 2020-12-03 23:34:57.695 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - SE			53111
+[TRACE] 2020-12-03 23:34:57.696 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - MI			49735
+[TRACE] 2020-12-03 23:34:57.696 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - WE			46200
+[TRACE] 2020-12-03 23:34:57.696 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - CH			43925
+[TRACE] 2020-12-03 23:34:57.696 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - ON			43911
+[TRACE] 2020-12-03 23:34:57.697 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - BR			43489
+[TRACE] 2020-12-03 23:34:57.697 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - NE			41291
+[TRACE] 2020-12-03 23:34:57.697 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - TO			40296
+[TRACE] 2020-12-03 23:34:57.697 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - FA			40000
+[TRACE] 2020-12-03 23:34:57.698 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - AN			37584
+[TRACE] 2020-12-03 23:34:57.698 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - DA			36936
+[TRACE] 2020-12-03 23:34:57.698 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - SI			36162
+[TRACE] 2020-12-03 23:34:57.698 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - DI			33135
+[TRACE] 2020-12-03 23:34:57.699 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - PA			33000
+[TRACE] 2020-12-03 23:34:57.699 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - BO			32835
+[TRACE] 2020-12-03 23:34:57.699 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - ME			30814
+[TRACE] 2020-12-03 23:34:57.699 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - TR			30388
+[TRACE] 2020-12-03 23:34:57.700 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - WI			30208
+[TRACE] 2020-12-03 23:34:57.700 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - FO			30008
+[TRACE] 2020-12-03 23:34:57.700 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - FI			29393
+[TRACE] 2020-12-03 23:34:57.701 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - MY			28905
+[TRACE] 2020-12-03 23:34:57.701 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - DR			28424
+[TRACE] 2020-12-03 23:34:57.701 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - RO			28350
+[TRACE] 2020-12-03 23:34:57.701 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - TE			26026
+[TRACE] 2020-12-03 23:34:57.702 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - TA			24366
+[TRACE] 2020-12-03 23:34:57.702 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - PR			22035
+[TRACE] 2020-12-03 23:34:57.702 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - EV			22018
+[TRACE] 2020-12-03 23:34:57.702 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - UN			21708
+[TRACE] 2020-12-03 23:34:57.703 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - FR			21576
+[TRACE] 2020-12-03 23:34:57.703 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - CR			21534
+[TRACE] 2020-12-03 23:34:57.703 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - IT			20628
+[TRACE] 2020-12-03 23:34:57.704 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - PO			20224
+[TRACE] 2020-12-03 23:34:57.704 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - KI			20165
+[TRACE] 2020-12-03 23:34:57.705 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - RA			18400
+[TRACE] 2020-12-03 23:34:57.705 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - RI			18161
+[TRACE] 2020-12-03 23:34:57.705 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - WO			17472
+[TRACE] 2020-12-03 23:34:57.706 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - BU			16867
+[TRACE] 2020-12-03 23:34:57.706 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - EL			15480
+[TRACE] 2020-12-03 23:34:57.706 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - I'			15458
+[TRACE] 2020-12-03 23:34:57.707 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - TI			15288
+[TRACE] 2020-12-03 23:34:57.708 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - JU			14345
+[TRACE] 2020-12-03 23:34:57.709 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - PE			13706
+[TRACE] 2020-12-03 23:34:57.709 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - BI			13622
+[TRACE] 2020-12-03 23:34:57.709 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - IF			13568
+[TRACE] 2020-12-03 23:34:57.710 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - GE			12136
+[TRACE] 2020-12-03 23:34:57.710 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - SP			11840
+[TRACE] 2020-12-03 23:34:57.711 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - GR			11352
+[TRACE] 2020-12-03 23:34:57.711 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - SL			11172
+[TRACE] 2020-12-03 23:34:57.711 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - GI			10240
+[TRACE] 2020-12-03 23:34:57.712 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - RU			9652
+[TRACE] 2020-12-03 23:34:57.712 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - HI			9632
+[TRACE] 2020-12-03 23:34:57.713 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - OU			9030
+[TRACE] 2020-12-03 23:34:57.713 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - PI			8946
+[TRACE] 2020-12-03 23:34:57.714 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - FE			8848
+[TRACE] 2020-12-03 23:34:57.714 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - IW			8844
+[TRACE] 2020-12-03 23:34:57.714 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - AM			8814
+[TRACE] 2020-12-03 23:34:57.714 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - ID			8282
+[TRACE] 2020-12-03 23:34:57.715 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - FL			7918
+[TRACE] 2020-12-03 23:34:57.715 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - PU			7245
+[TRACE] 2020-12-03 23:34:57.715 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - SW			6798
+[TRACE] 2020-12-03 23:34:57.715 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - EN			6440
+[TRACE] 2020-12-03 23:34:57.716 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - CL			6324
+[TRACE] 2020-12-03 23:34:57.716 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - AS			5544
+[TRACE] 2020-12-03 23:34:57.716 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - IM			5456
+[TRACE] 2020-12-03 23:34:57.717 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - FU			5340
+[TRACE] 2020-12-03 23:34:57.718 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - QU			5180
+[TRACE] 2020-12-03 23:34:57.720 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - PL			5151
+[TRACE] 2020-12-03 23:34:57.720 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - AR			4914
+[TRACE] 2020-12-03 23:34:57.720 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - TU			4830
+[TRACE] 2020-12-03 23:34:57.721 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - NA			4823
+[TRACE] 2020-12-03 23:34:57.721 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - IC			4730
+[TRACE] 2020-12-03 23:34:57.721 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - HU			4484
+[TRACE] 2020-12-03 23:34:57.721 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - VI			4080
+[TRACE] 2020-12-03 23:34:57.721 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - NI			4002
+[TRACE] 2020-12-03 23:34:57.722 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - SC			3916
+[TRACE] 2020-12-03 23:34:57.722 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - AT			3784
+[TRACE] 2020-12-03 23:34:57.722 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - IS			3552
+[TRACE] 2020-12-03 23:34:57.722 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - KE			3440
+[TRACE] 2020-12-03 23:34:57.723 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - IL			3136
+[TRACE] 2020-12-03 23:34:57.723 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - JE			2937
+[TRACE] 2020-12-03 23:34:57.723 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - SM			2745
+[TRACE] 2020-12-03 23:34:57.723 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - TW			2730
+[TRACE] 2020-12-03 23:34:57.723 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - CU			2695
+[TRACE] 2020-12-03 23:34:57.724 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - GU			2585
+[TRACE] 2020-12-03 23:34:57.725 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - AD			2478
+[TRACE] 2020-12-03 23:34:57.725 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - GA			2444
+[TRACE] 2020-12-03 23:34:57.727 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - LU			2418
+[TRACE] 2020-12-03 23:34:57.727 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - CI			2414
+[TRACE] 2020-12-03 23:34:57.727 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - MU			2332
+[TRACE] 2020-12-03 23:34:57.728 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - OH			2100
+[TRACE] 2020-12-03 23:34:57.728 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - EA,EX			2016
+[TRACE] 2020-12-03 23:34:57.728 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - AF			1960
+[TRACE] 2020-12-03 23:34:57.728 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - AP			1944
+[TRACE] 2020-12-03 23:34:57.729 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - SK			1891
+[TRACE] 2020-12-03 23:34:57.730 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - AB,JO			1860
+[TRACE] 2020-12-03 23:34:57.730 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - VA			1696
+[TRACE] 2020-12-03 23:34:57.730 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - IA			1525
+[TRACE] 2020-12-03 23:34:57.730 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - AC			1512
+[TRACE] 2020-12-03 23:34:57.731 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - YE			1452
+[TRACE] 2020-12-03 23:34:57.731 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - GL			1450
+[TRACE] 2020-12-03 23:34:57.731 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - JA			1400
+[TRACE] 2020-12-03 23:34:57.731 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - OL			1350
+[TRACE] 2020-12-03 23:34:57.731 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - AI			1320
+[TRACE] 2020-12-03 23:34:57.732 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - EM			1316
+[TRACE] 2020-12-03 23:34:57.732 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - OV			1272
+[TRACE] 2020-12-03 23:34:57.732 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - UP			1269
+[TRACE] 2020-12-03 23:34:57.732 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - DU			1258
+[TRACE] 2020-12-03 23:34:57.732 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - VE			1218
+[TRACE] 2020-12-03 23:34:57.732 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - MR			1056
+[TRACE] 2020-12-03 23:34:57.733 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - 10			1008
+[TRACE] 2020-12-03 23:34:57.733 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - OP			1000
+[TRACE] 2020-12-03 23:34:57.733 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - AU			969
+[TRACE] 2020-12-03 23:34:57.733 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - OR			864
+[TRACE] 2020-12-03 23:34:57.734 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - AW			779
+[TRACE] 2020-12-03 23:34:57.734 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - KN			775
+[TRACE] 2020-12-03 23:34:57.734 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - CE,WR			760
+[TRACE] 2020-12-03 23:34:57.735 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - IG			759
+[TRACE] 2020-12-03 23:34:57.735 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - GH			740
+[TRACE] 2020-12-03 23:34:57.735 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - KA			703
+[TRACE] 2020-12-03 23:34:57.735 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - IR			645
+[TRACE] 2020-12-03 23:34:57.736 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - AG			627
+[TRACE] 2020-12-03 23:34:57.736 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - OC			598
+[TRACE] 2020-12-03 23:34:57.736 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - VO			595
+[TRACE] 2020-12-03 23:34:57.736 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - PH			585
+[TRACE] 2020-12-03 23:34:57.737 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - I’			575
+[TRACE] 2020-12-03 23:34:57.737 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - NU			560
+[TRACE] 2020-12-03 23:34:57.737 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - IK			540
+[TRACE] 2020-12-03 23:34:57.737 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - ES			527
+[TRACE] 2020-12-03 23:34:57.737 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - OF			504
+[TRACE] 2020-12-03 23:34:57.738 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - SN			496
+[TRACE] 2020-12-03 23:34:57.738 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - EY			481
+[TRACE] 2020-12-03 23:34:57.738 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - US			418
+[TRACE] 2020-12-03 23:34:57.738 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - 19,20			399
+[TRACE] 2020-12-03 23:34:57.739 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - IH			396
+[TRACE] 2020-12-03 23:34:57.739 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - OB			336
+[TRACE] 2020-12-03 23:34:57.739 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - HY			325
+[TRACE] 2020-12-03 23:34:57.739 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - AV			230
+[TRACE] 2020-12-03 23:34:57.739 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - SY			221
+[TRACE] 2020-12-03 23:34:57.740 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - PS			204
+[TRACE] 2020-12-03 23:34:57.740 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - EC			203
+[TRACE] 2020-12-03 23:34:57.740 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - ER			192
+[TRACE] 2020-12-03 23:34:57.740 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - YA			184
+[TRACE] 2020-12-03 23:34:57.740 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - IB			170
+[TRACE] 2020-12-03 23:34:57.741 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - ZE			144
+[TRACE] 2020-12-03 23:34:57.742 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - RH			135
+[TRACE] 2020-12-03 23:34:57.742 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - OD			121
+[TRACE] 2020-12-03 23:34:57.743 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - AH			112
+[TRACE] 2020-12-03 23:34:57.743 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - CY			108
+[TRACE] 2020-12-03 23:34:57.743 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - BY,ED			104
+[TRACE] 2020-12-03 23:34:57.744 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - OT			96
+[TRACE] 2020-12-03 23:34:57.744 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - KO			91
+[TRACE] 2020-12-03 23:34:57.744 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - 21			90
+[TRACE] 2020-12-03 23:34:57.744 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - DY,24,ZO			80
+[TRACE] 2020-12-03 23:34:57.745 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - ET			76
+[TRACE] 2020-12-03 23:34:57.745 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - EP			75
+[TRACE] 2020-12-03 23:34:57.745 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - OM,UG			63
+[TRACE] 2020-12-03 23:34:57.745 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - 12			56
+[TRACE] 2020-12-03 23:34:57.746 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - AY,S.			55
+[TRACE] 2020-12-03 23:34:57.746 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - EI,TY			50
+[TRACE] 2020-12-03 23:34:57.746 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - B.,JI,OO			48
+[TRACE] 2020-12-03 23:34:57.746 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - L.			45
+[TRACE] 2020-12-03 23:34:57.746 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - PY			44
+[TRACE] 2020-12-03 23:34:57.747 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - EU,GY,OK			42
+[TRACE] 2020-12-03 23:34:57.747 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - 30			40
+[TRACE] 2020-12-03 23:34:57.747 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - (I			38
+[TRACE] 2020-12-03 23:34:57.747 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - IJ,LY,50			36
+[TRACE] 2020-12-03 23:34:57.747 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - C'			35
+[TRACE] 2020-12-03 23:34:57.748 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - AQ,KU,UL			32
+[TRACE] 2020-12-03 23:34:57.748 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - 16			30
+[TRACE] 2020-12-03 23:34:57.748 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - C.			28
+[TRACE] 2020-12-03 23:34:57.748 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - OS,R.			27
+[TRACE] 2020-12-03 23:34:57.748 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - M.,OX,14			25
+[TRACE] 2020-12-03 23:34:57.749 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - 11,13,15			24
+[TRACE] 2020-12-03 23:34:57.749 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - F*,VR			22
+[TRACE] 2020-12-03 23:34:57.749 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - L'			21
+[TRACE] 2020-12-03 23:34:57.749 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - AE,EG,OA,25,40,XO			20
+[TRACE] 2020-12-03 23:34:57.749 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - ZI			18
+[TRACE] 2020-12-03 23:34:57.749 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - DJ,17			16
+[TRACE] 2020-12-03 23:34:57.750 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - IP,KR,22,90			15
+[TRACE] 2020-12-03 23:34:57.750 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - SQ,U.			14
+[TRACE] 2020-12-03 23:34:57.750 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - AK,D.,F.,IV,KY,N.,OG,UM,YU			12
+[TRACE] 2020-12-03 23:34:57.750 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - LL			11
+[TRACE] 2020-12-03 23:34:57.750 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - MS,O.,18			10
+[TRACE] 2020-12-03 23:34:57.751 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - G.,DÉ,(T,MT,..,2S,TS			9
+[TRACE] 2020-12-03 23:34:57.751 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - A-,E.,H.,II,NY,OW,23,T.,W.			8
+[TRACE] 2020-12-03 23:34:57.751 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - I.			7
+[TRACE] 2020-12-03 23:34:57.751 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - AA,BB,EE,P.,1,,2N,33,TB,UR,VU,WU,7S,ZA			6
+[TRACE] 2020-12-03 23:34:57.751 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - BT,TL,YI			5
+[TRACE] 2020-12-03 23:34:57.752 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - EF,F-,KL,2B,3A,V.,4T,WT,WY,YS,99			4
+[TRACE] 2020-12-03 23:34:57.752 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - A.,DH,DN,EB,OY,T-,4L,80,XX			3
+[TRACE] 2020-12-03 23:34:57.752 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - I,GN,GW,CÚ,(B,(F,(O,KH,PD,PT,1.,S&,RY,36,38,TC,3D,TK,UB,UH,4S,5:,VL,RÊ,66,6A,74,XE,7D,Y.,7Y,92,ZU			2
+[TRACE] 2020-12-03 23:34:57.752 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - AO,8,O,BS,X,D',CP,#B,DW,ÉL,EZ,イン,HM,(E,(K,IZ,MC,MZ,NB,バイ,PC,PM,S/,26,27,28,RX,2A,48,UD,UF,UK,4M,52,4R,56,4W,4Y,SÉ,8T,[O,<3,¡C			1
+[TRACE] 2020-12-03 23:34:57.752 [de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardBlocker] - Creating candidate record pairs from 386 blocks
+[INFO ] 2020-12-03 23:35:01.724 [de.uni_mannheim.informatik.dws.winter.matching.blockers.AbstractBlocker] - Debug results written to file: data/output/debugResultsBlocking_spotify_musicbrainz.csv
+[INFO ] 2020-12-03 23:35:01.725 [de.uni_mannheim.informatik.dws.winter.matching.algorithms.RuleBasedMatchingAlgorithm] - Matching 20,481 x 33,856 elements; 6,398,085 blocked pairs (reduction ratio: 0.9907729430333744)
+[INFO ] 2020-12-03 23:36:46.999 [de.uni_mannheim.informatik.dws.winter.matching.algorithms.RuleBasedMatchingAlgorithm] - Identity Resolution finished after 0:01:49.698; found 1,848 correspondences.
+[INFO ] 2020-12-03 23:36:47.224 [de.uni_mannheim.informatik.dws.winter.matching.rules.MatchingRule] - Debug results written to file: data/output/debugResultsMatchingRule_spotify_musicbrainz.csv
+[INFO ] 2020-12-03 23:36:47.364 [de.uni_mannheim.informatik.dws.winter.matching.rules.MatchingRule] - Debug results written to file: data/output/debugResultsMatchingRule_spotify_musicbrainz.csv_short
+[TRACE] 2020-12-03 23:36:47.370 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_18927,musicbrainz_30093,0.9999999999999999
+[TRACE] 2020-12-03 23:36:47.370 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_13689,musicbrainz_30072,0.9999999999999999
+[TRACE] 2020-12-03 23:36:47.370 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_13745,musicbrainz_18746,0.9999999999999999
+[TRACE] 2020-12-03 23:36:47.371 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_685,musicbrainz_24287,0.9999999999999999
+[TRACE] 2020-12-03 23:36:47.371 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_19707,musicbrainz_33216,0.9999999999999999
+[TRACE] 2020-12-03 23:36:47.371 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_11748,musicbrainz_3866,0.9999999999999999
+[TRACE] 2020-12-03 23:36:47.371 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_10672,musicbrainz_2593,0.8571428571428572
+[TRACE] 2020-12-03 23:36:47.371 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_16631,musicbrainz_33632,0.8333333333333333
+[TRACE] 2020-12-03 23:36:47.371 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_10672,musicbrainz_2647,0.8571428571428572
+[TRACE] 2020-12-03 23:36:47.371 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_10744,musicbrainz_28056,0.9071428571428573
+[TRACE] 2020-12-03 23:36:47.371 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_19063,musicbrainz_24458,0.9571428571428572
+[TRACE] 2020-12-03 23:36:47.371 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_16600,musicbrainz_17670,0.9099999999999999
+[TRACE] 2020-12-03 23:36:47.372 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_9910,musicbrainz_15290,0.8583333333333333
+[TRACE] 2020-12-03 23:36:47.372 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_13896,musicbrainz_33855,0.8788461538461538
+[TRACE] 2020-12-03 23:36:47.372 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_17635,musicbrainz_2583,0.8769230769230769
+[TRACE] 2020-12-03 23:36:47.372 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_11827,musicbrainz_27357,0.903846153846154
+[TRACE] 2020-12-03 23:36:47.372 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_14774,musicbrainz_9948,0.9571428571428572
+[TRACE] 2020-12-03 23:36:47.372 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_11658,musicbrainz_33558,0.875
+[TRACE] 2020-12-03 23:36:47.372 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] spotify_14948,musicbrainz_30150,0.8954545454545455
+[TRACE] 2020-12-03 23:36:47.372 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_12858,musicbrainz_27378,0.9625
+[TRACE] 2020-12-03 23:36:47.372 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_5967,musicbrainz_33852,0.9
+[TRACE] 2020-12-03 23:36:47.373 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_8613,musicbrainz_19431,0.9099999999999999
+[TRACE] 2020-12-03 23:36:47.373 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_17762,musicbrainz_29736,0.9099999999999999
+[TRACE] 2020-12-03 23:36:47.373 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_9688,musicbrainz_26655,0.9999999999999999
+[TRACE] 2020-12-03 23:36:47.373 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_17736,musicbrainz_32638,0.95
+[TRACE] 2020-12-03 23:36:47.373 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_10938,musicbrainz_26725,0.9999999999999999
+[TRACE] 2020-12-03 23:36:47.373 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_18045,musicbrainz_8021,0.9999999999999999
+[TRACE] 2020-12-03 23:36:47.374 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_8924,musicbrainz_3545,0.9999999999999999
+[TRACE] 2020-12-03 23:36:47.374 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] spotify_13577,musicbrainz_20657,0.8900000000000001
+[TRACE] 2020-12-03 23:36:47.374 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_1573,musicbrainz_3666,0.9599999999999999
+[TRACE] 2020-12-03 23:36:47.374 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_16150,musicbrainz_9873,0.9249999999999999
+[TRACE] 2020-12-03 23:36:47.374 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] spotify_9684,musicbrainz_26056,0.7
+[TRACE] 2020-12-03 23:36:47.374 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_7636,musicbrainz_9571,0.8571428571428571
+[TRACE] 2020-12-03 23:36:47.374 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_13650,musicbrainz_33631,0.8371428571428571
+[TRACE] 2020-12-03 23:36:47.375 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_614,musicbrainz_24463,0.95
+[TRACE] 2020-12-03 23:36:47.375 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_13970,musicbrainz_17974,0.7999999999999999
+[TRACE] 2020-12-03 23:36:47.375 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_16937,musicbrainz_8537,0.8833333333333333
+[TRACE] 2020-12-03 23:36:47.375 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_8985,musicbrainz_3678,0.8999999999999999
+[TRACE] 2020-12-03 23:36:47.375 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_16977,musicbrainz_5506,0.8083333333333333
+[TRACE] 2020-12-03 23:36:47.376 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_8752,musicbrainz_13067,0.9499999999999998
+[TRACE] 2020-12-03 23:36:47.376 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_12238,musicbrainz_33222,0.9999999999999999
+[TRACE] 2020-12-03 23:36:47.376 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_17810,musicbrainz_3565,0.9999999999999999
+[TRACE] 2020-12-03 23:36:47.376 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_12168,musicbrainz_12216,0.9999999999999999
+[TRACE] 2020-12-03 23:36:47.376 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_10762,musicbrainz_23986,0.9999999999999999
+[TRACE] 2020-12-03 23:36:47.376 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_14784,musicbrainz_29674,0.9999999999999999
+[TRACE] 2020-12-03 23:36:47.377 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_19745,musicbrainz_2018,0.9999999999999999
+[TRACE] 2020-12-03 23:36:47.377 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_11837,musicbrainz_33207,0.9999999999999999
+[TRACE] 2020-12-03 23:36:47.377 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_53,musicbrainz_7204,0.9999999999999999
+[TRACE] 2020-12-03 23:36:47.377 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_1327,musicbrainz_7894,0.9999999999999999
+[TRACE] 2020-12-03 23:36:47.377 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_12889,musicbrainz_7887,0.9999999999999999
+[TRACE] 2020-12-03 23:36:47.377 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_1552,musicbrainz_3665,0.9999999999999999
+[TRACE] 2020-12-03 23:36:47.378 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] spotify_84,musicbrainz_6882,0.9699999999999999
+[TRACE] 2020-12-03 23:36:47.378 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] spotify_16697,musicbrainz_26643,0.825
+[TRACE] 2020-12-03 23:36:47.378 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_14949,musicbrainz_4544,0.875
+[TRACE] 2020-12-03 23:36:47.378 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_15600,musicbrainz_18872,0.9538461538461539
+[TRACE] 2020-12-03 23:36:47.378 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_8526,musicbrainz_21663,0.968421052631579
+[TRACE] 2020-12-03 23:36:47.378 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_10711,musicbrainz_367,0.8066666666666666
+[TRACE] 2020-12-03 23:36:47.379 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_2210,musicbrainz_1923,0.9181818181818181
+[TRACE] 2020-12-03 23:36:47.379 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_16980,musicbrainz_18775,0.9699999999999999
+[TRACE] 2020-12-03 23:36:47.379 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_13689,musicbrainz_9853,0.9299999999999999
+[TRACE] 2020-12-03 23:36:47.379 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_16806,musicbrainz_3575,0.9538461538461539
+[TRACE] 2020-12-03 23:36:47.380 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_19566,musicbrainz_20638,0.9999999999999999
+[TRACE] 2020-12-03 23:36:47.380 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_15762,musicbrainz_18751,0.9999999999999999
+[TRACE] 2020-12-03 23:36:47.380 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_11833,musicbrainz_26543,0.7374999999999999
+[TRACE] 2020-12-03 23:36:47.381 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] spotify_1192,musicbrainz_28044,0.7
+[TRACE] 2020-12-03 23:36:47.381 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_1410,musicbrainz_21404,0.9999999999999999
+[TRACE] 2020-12-03 23:36:47.381 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_1405,musicbrainz_33589,0.9999999999999999
+[TRACE] 2020-12-03 23:36:47.381 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_18015,musicbrainz_3538,0.9999999999999999
+[TRACE] 2020-12-03 23:36:47.382 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_10759,musicbrainz_32130,0.7
+[TRACE] 2020-12-03 23:36:47.382 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_6783,musicbrainz_3426,0.9999999999999999
+[TRACE] 2020-12-03 23:36:47.382 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_17917,musicbrainz_17681,0.9999999999999999
+[TRACE] 2020-12-03 23:36:47.382 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_13255,musicbrainz_20444,0.9999999999999999
+[TRACE] 2020-12-03 23:36:47.383 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_2765,musicbrainz_17436,0.9166666666666667
+[TRACE] 2020-12-03 23:36:47.383 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_5998,musicbrainz_27296,0.9999999999999999
+[TRACE] 2020-12-03 23:36:47.383 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_13240,musicbrainz_8825,0.9999999999999999
+[TRACE] 2020-12-03 23:36:47.384 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_7825,musicbrainz_19204,0.9999999999999999
+[TRACE] 2020-12-03 23:36:47.384 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_11962,musicbrainz_31961,0.9999999999999999
+[TRACE] 2020-12-03 23:36:47.384 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] spotify_12813,musicbrainz_12871,0.7
+[TRACE] 2020-12-03 23:36:47.384 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_3491,musicbrainz_8006,0.9999999999999999
+[TRACE] 2020-12-03 23:36:47.385 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_423,musicbrainz_9861,0.9666666666666667
+[TRACE] 2020-12-03 23:36:47.385 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [correct] spotify_1335,musicbrainz_3505,0.9999999999999999
+[TRACE] 2020-12-03 23:36:47.385 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] spotify_5643,musicbrainz_14048,0.7
+[TRACE] 2020-12-03 23:36:47.385 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [wrong] spotify_18760,musicbrainz_25526,0.7
+[TRACE] 2020-12-03 23:36:47.385 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] ﻿spotify_4799,musicbrainz_3543
+[TRACE] 2020-12-03 23:36:47.386 [de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator] - [missing] spotify_8026,musicbrainz_15478
+[INFO ] 2020-12-03 23:42:59.750 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 11574 elements from dbpedia_translated.xml
+[INFO ] 2020-12-03 23:42:59.942 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0.89
+[INFO ] 2020-12-03 23:42:59.942 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2020-12-03 23:42:59.970 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Year: 1.00
+[INFO ] 2020-12-03 23:42:59.970 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Producer: 1.00
+[INFO ] 2020-12-03 23:42:59.970 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	RecordLabel: 1.00
+[INFO ] 2020-12-03 23:42:59.971 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Artist: 1.00
+[INFO ] 2020-12-03 23:42:59.971 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Genre: 1.00
+[INFO ] 2020-12-03 23:42:59.972 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Album: 1.00
+[INFO ] 2020-12-03 23:42:59.972 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Name: 1.00
+[INFO ] 2020-12-03 23:42:59.973 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Duration: 0.00
+[INFO ] 2020-12-03 23:42:59.973 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Writer: 1.00
+[INFO ] 2020-12-03 23:43:00.480 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 33856 elements from musicbrainz_translated.xml
+[INFO ] 2020-12-03 23:43:00.682 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0.56
+[INFO ] 2020-12-03 23:43:00.683 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2020-12-03 23:43:00.780 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Year: 1.00
+[INFO ] 2020-12-03 23:43:00.781 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Producer: 0.00
+[INFO ] 2020-12-03 23:43:00.781 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	RecordLabel: 0.00
+[INFO ] 2020-12-03 23:43:00.781 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Artist: 1.00
+[INFO ] 2020-12-03 23:43:00.782 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Genre: 1.00
+[INFO ] 2020-12-03 23:43:00.782 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Album: 1.00
+[INFO ] 2020-12-03 23:43:00.782 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Name: 1.00
+[INFO ] 2020-12-03 23:43:00.783 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Duration: 0.00
+[INFO ] 2020-12-03 23:43:00.783 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Writer: 0.00
+[INFO ] 2020-12-03 23:43:01.012 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 20481 elements from spotify_translated.xml
+[INFO ] 2020-12-03 23:43:01.072 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0.33
+[INFO ] 2020-12-03 23:43:01.072 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2020-12-03 23:43:01.104 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Year: 1.00
+[INFO ] 2020-12-03 23:43:01.105 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Producer: 0.00
+[INFO ] 2020-12-03 23:43:01.105 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	RecordLabel: 0.00
+[INFO ] 2020-12-03 23:43:01.105 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Artist: 1.00
+[INFO ] 2020-12-03 23:43:01.105 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Genre: 0.00
+[INFO ] 2020-12-03 23:43:01.106 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Album: 0.00
+[INFO ] 2020-12-03 23:43:01.106 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Name: 1.00
+[INFO ] 2020-12-03 23:43:01.106 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Duration: 0.00
+[INFO ] 2020-12-03 23:43:01.107 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Writer: 0.00
+[INFO ] 2020-12-03 23:43:01.149 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - Group Size Distribtion of 2974 groups:
+[INFO ] 2020-12-03 23:43:01.150 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 	Group Size 	| Frequency 
+[INFO ] 2020-12-03 23:43:01.150 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 	————————————————————————————
+[INFO ] 2020-12-03 23:43:01.151 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		2	| 	2311
+[INFO ] 2020-12-03 23:43:01.151 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		3	| 	474
+[INFO ] 2020-12-03 23:43:01.152 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		4	| 	116
+[INFO ] 2020-12-03 23:43:01.152 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		5	| 	45
+[INFO ] 2020-12-03 23:43:01.152 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		6	| 	18
+[INFO ] 2020-12-03 23:43:01.152 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		7	| 	6
+[INFO ] 2020-12-03 23:43:01.152 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		8	| 	2
+[INFO ] 2020-12-03 23:43:01.152 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		9	| 	1
+[INFO ] 2020-12-03 23:43:01.152 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		10	| 	1
+[ERROR] 2020-12-03 23:43:01.160 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - No elements matching the XPath (/songs/song) found in the input file C:\Users\56840\WDI_ProjectTeam5\data\goldstandard\gold.xml
+[INFO ] 2020-12-03 23:43:01.164 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - Attribute Consistencies:
+[INFO ] 2020-12-03 23:43:01.346 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - 	Artist: 0.53
+[INFO ] 2020-12-03 23:43:01.347 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - 	Producer: 1.00
+[INFO ] 2020-12-03 23:43:01.347 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - 	RecordLabel: 1.00
+[INFO ] 2020-12-03 23:43:01.347 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - 	Album: 0.87
+[INFO ] 2020-12-03 23:43:01.347 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - 	Genre: 0.74
+[INFO ] 2020-12-03 23:43:01.348 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - 	Writer: 1.00
+[INFO ] 2020-12-03 23:43:01.348 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - 	Name: 0.47
+[INFO ] 2020-12-03 23:43:01.849 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionStrategy] - Debug results written to file: data/output/debugResultsDatafusion.csv
+[INFO ] 2020-12-03 23:53:37.859 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 11574 elements from dbpedia_translated.xml
+[INFO ] 2020-12-03 23:53:38.058 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0.89
+[INFO ] 2020-12-03 23:53:38.058 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2020-12-03 23:53:38.109 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Year: 1.00
+[INFO ] 2020-12-03 23:53:38.110 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Producer: 1.00
+[INFO ] 2020-12-03 23:53:38.111 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	RecordLabel: 1.00
+[INFO ] 2020-12-03 23:53:38.112 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Artist: 1.00
+[INFO ] 2020-12-03 23:53:38.112 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Genre: 1.00
+[INFO ] 2020-12-03 23:53:38.112 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Album: 1.00
+[INFO ] 2020-12-03 23:53:38.113 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Name: 1.00
+[INFO ] 2020-12-03 23:53:38.113 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Duration: 0.00
+[INFO ] 2020-12-03 23:53:38.113 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Writer: 1.00
+[INFO ] 2020-12-03 23:53:38.558 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 33856 elements from musicbrainz_translated.xml
+[INFO ] 2020-12-03 23:53:38.664 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0.56
+[INFO ] 2020-12-03 23:53:38.664 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2020-12-03 23:53:38.715 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Year: 1.00
+[INFO ] 2020-12-03 23:53:38.715 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Producer: 0.00
+[INFO ] 2020-12-03 23:53:38.715 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	RecordLabel: 0.00
+[INFO ] 2020-12-03 23:53:38.715 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Artist: 1.00
+[INFO ] 2020-12-03 23:53:38.715 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Genre: 1.00
+[INFO ] 2020-12-03 23:53:38.715 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Album: 1.00
+[INFO ] 2020-12-03 23:53:38.716 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Name: 1.00
+[INFO ] 2020-12-03 23:53:38.716 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Duration: 0.00
+[INFO ] 2020-12-03 23:53:38.716 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Writer: 0.00
+[INFO ] 2020-12-03 23:53:38.888 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 20481 elements from spotify_translated.xml
+[INFO ] 2020-12-03 23:53:38.966 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0.33
+[INFO ] 2020-12-03 23:53:38.966 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2020-12-03 23:53:39.004 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Year: 1.00
+[INFO ] 2020-12-03 23:53:39.004 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Producer: 0.00
+[INFO ] 2020-12-03 23:53:39.004 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	RecordLabel: 0.00
+[INFO ] 2020-12-03 23:53:39.005 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Artist: 1.00
+[INFO ] 2020-12-03 23:53:39.005 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Genre: 0.00
+[INFO ] 2020-12-03 23:53:39.005 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Album: 0.00
+[INFO ] 2020-12-03 23:53:39.005 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Name: 1.00
+[INFO ] 2020-12-03 23:53:39.005 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Duration: 0.00
+[INFO ] 2020-12-03 23:53:39.006 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Writer: 0.00
+[INFO ] 2020-12-03 23:53:39.034 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - Group Size Distribtion of 2974 groups:
+[INFO ] 2020-12-03 23:53:39.035 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 	Group Size 	| Frequency 
+[INFO ] 2020-12-03 23:53:39.035 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 	————————————————————————————
+[INFO ] 2020-12-03 23:53:39.036 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		2	| 	2311
+[INFO ] 2020-12-03 23:53:39.036 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		3	| 	474
+[INFO ] 2020-12-03 23:53:39.036 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		4	| 	116
+[INFO ] 2020-12-03 23:53:39.037 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		5	| 	45
+[INFO ] 2020-12-03 23:53:39.037 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		6	| 	18
+[INFO ] 2020-12-03 23:53:39.037 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		7	| 	6
+[INFO ] 2020-12-03 23:53:39.037 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		8	| 	2
+[INFO ] 2020-12-03 23:53:39.037 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		9	| 	1
+[INFO ] 2020-12-03 23:53:39.037 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		10	| 	1
+[ERROR] 2020-12-03 23:53:39.044 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - No elements matching the XPath (/songs/song) found in the input file C:\Users\56840\WDI_ProjectTeam5\data\goldstandard\gold.xml
+[INFO ] 2020-12-03 23:53:39.049 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - Attribute Consistencies:
+[INFO ] 2020-12-03 23:53:39.223 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - 	Artist: 0.53
+[INFO ] 2020-12-03 23:53:39.223 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - 	Producer: 1.00
+[INFO ] 2020-12-03 23:53:39.224 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - 	RecordLabel: 1.00
+[INFO ] 2020-12-03 23:53:39.224 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - 	Album: 0.87
+[INFO ] 2020-12-03 23:53:39.224 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - 	Genre: 0.74
+[INFO ] 2020-12-03 23:53:39.225 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - 	Writer: 1.00
+[INFO ] 2020-12-03 23:53:39.225 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - 	Name: 0.47
+[INFO ] 2020-12-03 23:53:39.776 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionStrategy] - Debug results written to file: data/output/debugResultsDatafusion.csv
+[INFO ] 2020-12-04 01:37:04.212 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 11574 elements from dbpedia_translated.xml
+[INFO ] 2020-12-04 01:37:04.616 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0.89
+[INFO ] 2020-12-04 01:37:04.616 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2020-12-04 01:37:04.675 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Year: 1.00
+[INFO ] 2020-12-04 01:37:04.675 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Producer: 1.00
+[INFO ] 2020-12-04 01:37:04.676 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	RecordLabel: 1.00
+[INFO ] 2020-12-04 01:37:04.682 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Artist: 1.00
+[INFO ] 2020-12-04 01:37:04.683 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Genre: 1.00
+[INFO ] 2020-12-04 01:37:04.683 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Album: 1.00
+[INFO ] 2020-12-04 01:37:04.684 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Name: 1.00
+[INFO ] 2020-12-04 01:37:04.685 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Duration: 0.00
+[INFO ] 2020-12-04 01:37:04.685 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Writer: 1.00
+[INFO ] 2020-12-04 01:37:06.122 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 33856 elements from musicbrainz_translated.xml
+[INFO ] 2020-12-04 01:37:06.658 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0.56
+[INFO ] 2020-12-04 01:37:06.695 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2020-12-04 01:37:06.880 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Year: 1.00
+[INFO ] 2020-12-04 01:37:06.881 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Producer: 0.00
+[INFO ] 2020-12-04 01:37:06.882 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	RecordLabel: 0.00
+[INFO ] 2020-12-04 01:37:06.883 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Artist: 1.00
+[INFO ] 2020-12-04 01:37:06.884 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Genre: 1.00
+[INFO ] 2020-12-04 01:37:06.885 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Album: 1.00
+[INFO ] 2020-12-04 01:37:06.885 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Name: 1.00
+[INFO ] 2020-12-04 01:37:06.886 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Duration: 0.00
+[INFO ] 2020-12-04 01:37:06.887 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Writer: 0.00
+[INFO ] 2020-12-04 01:37:07.346 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 20481 elements from spotify_translated.xml
+[INFO ] 2020-12-04 01:37:07.477 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0.33
+[INFO ] 2020-12-04 01:37:07.478 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2020-12-04 01:37:07.525 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Year: 1.00
+[INFO ] 2020-12-04 01:37:07.525 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Producer: 0.00
+[INFO ] 2020-12-04 01:37:07.526 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	RecordLabel: 0.00
+[INFO ] 2020-12-04 01:37:07.527 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Artist: 1.00
+[INFO ] 2020-12-04 01:37:07.527 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Genre: 0.00
+[INFO ] 2020-12-04 01:37:07.528 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Album: 0.00
+[INFO ] 2020-12-04 01:37:07.529 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Name: 1.00
+[INFO ] 2020-12-04 01:37:07.530 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Duration: 0.00
+[INFO ] 2020-12-04 01:37:07.531 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Writer: 0.00
+[INFO ] 2020-12-04 01:37:07.591 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - Group Size Distribtion of 2974 groups:
+[INFO ] 2020-12-04 01:37:07.592 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 	Group Size 	| Frequency 
+[INFO ] 2020-12-04 01:37:07.592 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 	————————————————————————————
+[INFO ] 2020-12-04 01:37:07.594 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		2	| 	2311
+[INFO ] 2020-12-04 01:37:07.595 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		3	| 	474
+[INFO ] 2020-12-04 01:37:07.595 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		4	| 	116
+[INFO ] 2020-12-04 01:37:07.595 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		5	| 	45
+[INFO ] 2020-12-04 01:37:07.596 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		6	| 	18
+[INFO ] 2020-12-04 01:37:07.596 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		7	| 	6
+[INFO ] 2020-12-04 01:37:07.596 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		8	| 	2
+[INFO ] 2020-12-04 01:37:07.596 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		9	| 	1
+[INFO ] 2020-12-04 01:37:07.597 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		10	| 	1
+[ERROR] 2020-12-04 01:37:07.613 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - No elements matching the XPath (/songs/song) found in the input file C:\Users\56840\WDI_ProjectTeam5\data\goldstandard\gold.xml
+[INFO ] 2020-12-04 01:37:07.623 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - Attribute Consistencies:
+[INFO ] 2020-12-04 01:37:08.191 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - 	Artist: 0.53
+[INFO ] 2020-12-04 01:37:08.196 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - 	Producer: 1.00
+[INFO ] 2020-12-04 01:37:08.199 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - 	RecordLabel: 1.00
+[INFO ] 2020-12-04 01:37:08.203 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - 	Album: 0.87
+[INFO ] 2020-12-04 01:37:08.204 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - 	Genre: 0.74
+[INFO ] 2020-12-04 01:37:08.205 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - 	Writer: 1.00
+[INFO ] 2020-12-04 01:37:08.207 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - 	Name: 0.47
+[INFO ] 2020-12-04 01:38:04.646 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 11574 elements from dbpedia_translated.xml
+[INFO ] 2020-12-04 01:38:05.145 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0.89
+[INFO ] 2020-12-04 01:38:05.145 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2020-12-04 01:38:05.323 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Year: 1.00
+[INFO ] 2020-12-04 01:38:05.336 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Producer: 1.00
+[INFO ] 2020-12-04 01:38:05.338 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	RecordLabel: 1.00
+[INFO ] 2020-12-04 01:38:05.341 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Artist: 1.00
+[INFO ] 2020-12-04 01:38:05.343 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Genre: 1.00
+[INFO ] 2020-12-04 01:38:05.346 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Album: 1.00
+[INFO ] 2020-12-04 01:38:05.347 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Name: 1.00
+[INFO ] 2020-12-04 01:38:05.348 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Duration: 0.00
+[INFO ] 2020-12-04 01:38:05.350 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Writer: 1.00
+[INFO ] 2020-12-04 01:38:06.601 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 33856 elements from musicbrainz_translated.xml
+[INFO ] 2020-12-04 01:38:06.895 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0.56
+[INFO ] 2020-12-04 01:38:06.896 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2020-12-04 01:38:06.998 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Year: 1.00
+[INFO ] 2020-12-04 01:38:07.000 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Producer: 0.00
+[INFO ] 2020-12-04 01:38:07.003 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	RecordLabel: 0.00
+[INFO ] 2020-12-04 01:38:07.005 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Artist: 1.00
+[INFO ] 2020-12-04 01:38:07.006 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Genre: 1.00
+[INFO ] 2020-12-04 01:38:07.007 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Album: 1.00
+[INFO ] 2020-12-04 01:38:07.007 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Name: 1.00
+[INFO ] 2020-12-04 01:38:07.008 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Duration: 0.00
+[INFO ] 2020-12-04 01:38:07.009 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Writer: 0.00
+[INFO ] 2020-12-04 01:38:07.448 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - Loading 20481 elements from spotify_translated.xml
+[INFO ] 2020-12-04 01:38:07.648 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - DataSet density: 0.33
+[INFO ] 2020-12-04 01:38:07.649 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - Attributes densities:
+[INFO ] 2020-12-04 01:38:07.748 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Year: 1.00
+[INFO ] 2020-12-04 01:38:07.749 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Producer: 0.00
+[INFO ] 2020-12-04 01:38:07.750 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	RecordLabel: 0.00
+[INFO ] 2020-12-04 01:38:07.750 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Artist: 1.00
+[INFO ] 2020-12-04 01:38:07.751 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Genre: 0.00
+[INFO ] 2020-12-04 01:38:07.751 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Album: 0.00
+[INFO ] 2020-12-04 01:38:07.752 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Name: 1.00
+[INFO ] 2020-12-04 01:38:07.753 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Duration: 0.00
+[INFO ] 2020-12-04 01:38:07.753 [de.uni_mannheim.informatik.dws.winter.model.FusibleHashedDataSet] - 	Writer: 0.00
+[INFO ] 2020-12-04 01:38:07.831 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - Group Size Distribtion of 2974 groups:
+[INFO ] 2020-12-04 01:38:07.832 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 	Group Size 	| Frequency 
+[INFO ] 2020-12-04 01:38:07.832 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 	————————————————————————————
+[INFO ] 2020-12-04 01:38:07.834 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		2	| 	2311
+[INFO ] 2020-12-04 01:38:07.834 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		3	| 	474
+[INFO ] 2020-12-04 01:38:07.834 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		4	| 	116
+[INFO ] 2020-12-04 01:38:07.834 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		5	| 	45
+[INFO ] 2020-12-04 01:38:07.835 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		6	| 	18
+[INFO ] 2020-12-04 01:38:07.835 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		7	| 	6
+[INFO ] 2020-12-04 01:38:07.835 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		8	| 	2
+[INFO ] 2020-12-04 01:38:07.835 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		9	| 	1
+[INFO ] 2020-12-04 01:38:07.835 [de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet] - 		10	| 	1
+[ERROR] 2020-12-04 01:38:07.855 [de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader] - No elements matching the XPath (/songs/song) found in the input file C:\Users\56840\WDI_ProjectTeam5\data\goldstandard\gold.xml
+[INFO ] 2020-12-04 01:38:07.867 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - Attribute Consistencies:
+[INFO ] 2020-12-04 01:38:08.298 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - 	Artist: 0.53
+[INFO ] 2020-12-04 01:38:08.299 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - 	Producer: 1.00
+[INFO ] 2020-12-04 01:38:08.300 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - 	RecordLabel: 1.00
+[INFO ] 2020-12-04 01:38:08.301 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - 	Album: 0.87
+[INFO ] 2020-12-04 01:38:08.302 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - 	Genre: 0.74
+[INFO ] 2020-12-04 01:38:08.302 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - 	Writer: 1.00
+[INFO ] 2020-12-04 01:38:08.303 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine] - 	Name: 0.47
+[INFO ] 2020-12-04 01:38:09.580 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionStrategy] - Debug results written to file: data/output/debugResultsDatafusion.csv
+[TRACE] 2020-12-04 01:38:09.993 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEvaluator] - Attribute-specific Accuracy:
+[TRACE] 2020-12-04 01:38:09.994 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEvaluator] - 	Producer: NaN
+[TRACE] 2020-12-04 01:38:09.994 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEvaluator] - 	RecordLabel: NaN
+[TRACE] 2020-12-04 01:38:09.994 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEvaluator] - 	Artist: NaN
+[TRACE] 2020-12-04 01:38:09.995 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEvaluator] - 	Genre: NaN
+[TRACE] 2020-12-04 01:38:09.995 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEvaluator] - 	Name: NaN
+[TRACE] 2020-12-04 01:38:09.996 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEvaluator] - 	Album: NaN
+[TRACE] 2020-12-04 01:38:09.996 [de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEvaluator] - 	Writer: NaN

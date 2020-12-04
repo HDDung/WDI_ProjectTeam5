@@ -11,6 +11,12 @@
  */
 package com.team5.maven.IdentityResolution.model;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
+import java.time.temporal.ChronoField;
+import java.util.Locale;
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 
@@ -41,9 +47,29 @@ public class SongXMLFormatter extends XMLFormatter<Song> {
 				.getAlbum(), record
 				.getMergedAttributeProvenance(Song.ALBUM), doc));
 		
-//		song.appendChild(createTextElementWithProvenance("years",
-//				record.getYear(),
-//				record.getMergedAttributeProvenance(Song.YEAR), doc));
+		LocalDateTime year = record.getYear();
+		if(year != null) {
+			song.appendChild(createTextElementWithProvenance("years",
+					Integer.toString(year.getYear()),
+					record.getMergedAttributeProvenance(Song.YEAR), doc));
+		} else {
+			song.appendChild(createTextElementWithProvenance("years",
+					"",
+					record.getMergedAttributeProvenance(Song.YEAR), doc));
+		}
+		
+		
+//		try {
+//			String year = record.getYear().toString();
+//			song.appendChild(createTextElementWithProvenance("years",
+//					year,
+//					record.getMergedAttributeProvenance(Song.YEAR), doc));
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//			song.appendChild(createTextElementWithProvenance("years",
+//					"",
+//					record.getMergedAttributeProvenance(Song.YEAR), doc));
+//		}
 		
 		song.appendChild(createTextElementWithProvenance("duration",
 				String.valueOf(record.getDuration()),
