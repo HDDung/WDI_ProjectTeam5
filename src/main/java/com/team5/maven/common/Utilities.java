@@ -1,4 +1,4 @@
-package com.team5.maven.utility;
+package com.team5.maven.common;
 
 import org.jsoup.Jsoup;
 
