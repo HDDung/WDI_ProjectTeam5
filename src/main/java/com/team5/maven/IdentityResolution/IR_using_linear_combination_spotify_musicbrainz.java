@@ -60,7 +60,7 @@ public class IR_using_linear_combination_spotify_musicbrainz {
 		// add comparators
 		//matchingRule.addComparator(new SongNameComparatorLevenshtein(), 0.5);
 		matchingRule.addComparator(new SongNameComparatorLevenshtein(), 0.6);
-		matchingRule.addComparator(new SongArtistCustomizedComparator(), 0.4);
+		matchingRule.addComparator(new SongArtistCustomizedComparator(), 0.3);
 		matchingRule.addComparator(new SongDateComparator2Years(), 0.1);
 		//matchingRule.addComparator(new SongArtistsComparatorToken(), 0.2);
 		//matchingRule.addComparator(new SongArtistsComparatorLevenshtein(), 0.3);
