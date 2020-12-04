@@ -1,9 +1,16 @@
 package com.team5.maven.DataFusion;
 
 import java.io.File;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.time.format.DateTimeFormatterBuilder;
+import java.time.temporal.ChronoField;
+import java.util.Locale;
 
 //import org.apache.logging.log4j.Logger;
 import org.slf4j.Logger;
+
+
 
 import com.team5.maven.DataFusion.evaluation.AlbumEvaluationRule;
 import com.team5.maven.DataFusion.evaluation.ArtistEvaluationRule;
@@ -16,6 +23,7 @@ import com.team5.maven.DataFusion.evaluation.WriterEvaluationRule;
 import com.team5.maven.DataFusion.evaluation.YearEvaluationRule;
 import com.team5.maven.DataFusion.fusers.AlbumFuserLongestString;
 import com.team5.maven.DataFusion.fusers.ArtistFuserLongestString;
+import com.team5.maven.DataFusion.fusers.ArtistFuserUnionFavourSpotify;
 import com.team5.maven.DataFusion.fusers.DurationFuserAverage;
 import com.team5.maven.DataFusion.fusers.GenreFuserLongestString;
 import com.team5.maven.DataFusion.fusers.NameFuserLongestString;
@@ -26,6 +34,7 @@ import com.team5.maven.DataFusion.fusers.YearFuserVoting;
 import com.team5.maven.IdentityResolution.model.Song;
 import com.team5.maven.IdentityResolution.model.SongXMLFormatter;
 import com.team5.maven.IdentityResolution.model.SongXMLReader;
+import com.team5.maven.common.MetaData;
 
 import de.uni_mannheim.informatik.dws.winter.datafusion.CorrespondenceSet;
 import de.uni_mannheim.informatik.dws.winter.datafusion.DataFusionEngine;
@@ -77,17 +86,17 @@ public class DataFusion_Main
 		ds2.setScore(1.0);
 		ds3.setScore(1.0);
 
-		// Date (e.g. last update)
-//		DateTimeFormatter formatter = new DateTimeFormatterBuilder()
-//		        .appendPattern("yyyy-MM-dd")
-//		        .parseDefaulting(ChronoField.CLOCK_HOUR_OF_DAY, 0)
-//		        .parseDefaulting(ChronoField.MINUTE_OF_HOUR, 0)
-//		        .parseDefaulting(ChronoField.SECOND_OF_MINUTE, 0)
-//		        .toFormatter(Locale.ENGLISH);
+//		 Date (e.g. last update)
+		DateTimeFormatter formatter = new DateTimeFormatterBuilder()
+		        .appendPattern("yyyy-MM-dd")
+		        .parseDefaulting(ChronoField.CLOCK_HOUR_OF_DAY, 0)
+		        .parseDefaulting(ChronoField.MINUTE_OF_HOUR, 0)
+		        .parseDefaulting(ChronoField.SECOND_OF_MINUTE, 0)
+		        .toFormatter(Locale.ENGLISH);
 		
-		//ds1.setDate(LocalDateTime.parse("2012-01-01", formatter));
-		//ds2.setDate(LocalDateTime.parse("2010-01-01", formatter));
-		//ds3.setDate(LocalDateTime.parse("2008-01-01", formatter));
+		ds1.setDate(LocalDateTime.parse(MetaData.DBPEDIA_DATE, formatter));
+		ds2.setDate(LocalDateTime.parse(MetaData.MUSICBRAINZ_DATE, formatter));
+		ds3.setDate(LocalDateTime.parse(MetaData.SPOTIFY_DATE, formatter));
 
 		// load correspondences
 		System.out.println("*\n*\tLoading correspondences\n*");
@@ -115,7 +124,7 @@ public class DataFusion_Main
 		
 		// add attribute fusers
 		strategy.addAttributeFuser(Song.NAME, new NameFuserLongestString(),new NameEvaluationRule());
-		strategy.addAttributeFuser(Song.ARTIST,new ArtistFuserLongestString(), new ArtistEvaluationRule());
+		strategy.addAttributeFuser(Song.ARTIST,new ArtistFuserUnionFavourSpotify(), new ArtistEvaluationRule());
 		strategy.addAttributeFuser(Song.ALBUM, new AlbumFuserLongestString(),new AlbumEvaluationRule());
 		strategy.addAttributeFuser(Song.GENRE, new GenreFuserLongestString(),new GenreEvaluationRule());
 		strategy.addAttributeFuser(Song.YEAR, new YearFuserVoting(),new YearEvaluationRule());
