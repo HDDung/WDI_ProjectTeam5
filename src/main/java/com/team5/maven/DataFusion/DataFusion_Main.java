@@ -51,7 +51,7 @@ public class DataFusion_Main
 	 * activate the "traceFile" logger as follows:
 	 *     private static final Logger logger = WinterLogManager.activateLogger("traceFile");
 	 *
-	 */
+	 */ 
 
 	private static final Logger logger = WinterLogManager.activateLogger("traceFile");
 	
