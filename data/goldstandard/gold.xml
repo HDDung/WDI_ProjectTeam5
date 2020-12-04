@@ -5,7 +5,7 @@
 		<name>Sippy Cup</name>
 		<artists>Melanie Martinez</artists>
 		<albums>Cry Baby</albums>
-		<years>2015</years>
+		<years>2015-01-01</years>
 		<genres>Pop</genres>
 		<duration>195000</duration>
 	</song>
@@ -14,7 +14,7 @@
 		<name>Every Teardrop Is a Waterfall</name>
 		<artists>Coldplay</artists>
 		<albums>Mylo Xyloto</albums>
-		<years>2011</years>
+		<years>2011-01-01</years>
 		<genres>Electronic, Rock, Pop</genres>
 		<duration>243000</duration>
 	</song>
