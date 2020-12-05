@@ -14,6 +14,7 @@ import com.team5.maven.IdentityResolution.comparators.SongArtistsComparatorToken
 import com.team5.maven.IdentityResolution.comparators.SongDateComparator2Years;
 import com.team5.maven.IdentityResolution.comparators.SongNameComparatorEqual;
 import com.team5.maven.IdentityResolution.comparators.SongNameComparatorLevenshtein;
+import com.team5.maven.IdentityResolution.comparators.SongNameComparatorRemoveBracketsAndDash;
 import com.team5.maven.IdentityResolution.model.Song;
 import com.team5.maven.IdentityResolution.model.SongXMLReader;
 
@@ -59,9 +60,9 @@ public class IR_using_linear_combination_spotify_musicbrainz {
 		
 		// add comparators
 		//matchingRule.addComparator(new SongNameComparatorLevenshtein(), 0.5);
-		matchingRule.addComparator(new SongNameComparatorLevenshtein(), 0.6);
-		matchingRule.addComparator(new SongArtistCustomizedComparator(), 0.3);
-		matchingRule.addComparator(new SongDateComparator2Years(), 0.1);
+		matchingRule.addComparator(new SongNameComparatorRemoveBracketsAndDash(), 0.6);
+		matchingRule.addComparator(new SongArtistCustomizedComparator(), 0.35);
+		matchingRule.addComparator(new SongDateComparator2Years(), 0.05);
 		//matchingRule.addComparator(new SongArtistsComparatorToken(), 0.2);
 		//matchingRule.addComparator(new SongArtistsComparatorLevenshtein(), 0.3);
 		

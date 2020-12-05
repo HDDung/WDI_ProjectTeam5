@@ -22,11 +22,13 @@ import com.team5.maven.DataFusion.evaluation.RecordLabelEvaluationRule;
 import com.team5.maven.DataFusion.evaluation.WriterEvaluationRule;
 import com.team5.maven.DataFusion.evaluation.YearEvaluationRule;
 import com.team5.maven.DataFusion.fusers.AlbumFuserLongestString;
+import com.team5.maven.DataFusion.fusers.AlbumFuserVoting;
 import com.team5.maven.DataFusion.fusers.ArtistFuserLongestString;
 import com.team5.maven.DataFusion.fusers.ArtistFuserUnionFavourSpotify;
 import com.team5.maven.DataFusion.fusers.DurationFuserAverage;
 import com.team5.maven.DataFusion.fusers.GenreFuserLongestString;
 import com.team5.maven.DataFusion.fusers.NameFuserLongestString;
+import com.team5.maven.DataFusion.fusers.NameFuserShortestString;
 import com.team5.maven.DataFusion.fusers.ProducerFuserLongestString;
 import com.team5.maven.DataFusion.fusers.RecordLabelFuserLongestString;
 import com.team5.maven.DataFusion.fusers.WriterFuserLongestString;
@@ -82,8 +84,8 @@ public class DataFusion_Main
 
 		// Maintain Provenance
 		// Scores (e.g. from rating)
-		ds1.setScore(1.0);
-		ds2.setScore(1.0);
+		ds1.setScore(2.0);
+		ds2.setScore(3.0);
 		ds3.setScore(1.0);
 
 //		 Date (e.g. last update)
@@ -123,9 +125,9 @@ public class DataFusion_Main
 		strategy.activateDebugReport("data/output/debugResultsDatafusion.csv", -1, gs);
 		
 		// add attribute fusers
-		strategy.addAttributeFuser(Song.NAME, new NameFuserLongestString(),new NameEvaluationRule());
+		strategy.addAttributeFuser(Song.NAME, new NameFuserShortestString(),new NameEvaluationRule());
 		strategy.addAttributeFuser(Song.ARTIST,new ArtistFuserUnionFavourSpotify(), new ArtistEvaluationRule());
-		strategy.addAttributeFuser(Song.ALBUM, new AlbumFuserLongestString(),new AlbumEvaluationRule());
+		strategy.addAttributeFuser(Song.ALBUM, new AlbumFuserVoting(),new AlbumEvaluationRule());
 		strategy.addAttributeFuser(Song.GENRE, new GenreFuserLongestString(),new GenreEvaluationRule());
 		strategy.addAttributeFuser(Song.YEAR, new YearFuserVoting(),new YearEvaluationRule());
 		strategy.addAttributeFuser(Song.DURATION,new DurationFuserAverage(),new DurationEvaluationRule());
