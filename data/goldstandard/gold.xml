@@ -81,4 +81,31 @@
 		<genres>hard rock</genres>
 		<duration>240000</duration>
 	</song>
+	<song>
+		<id>dbpedia_4038</id>
+		<name>The Motherload</name>
+		<artists>Mastodon</artists>
+		<albums>Once More 'Round the Sun</albums>
+		<years>2014-01-01</years>
+		<genres>Rock</genres>
+		<duration>300000</duration>
+	</song>
+	<song>
+		<id>musicbrainz_24473</id>
+		<name>Settle Down</name>
+		<artists>The 1975</artists>
+		<albums>The 1975</albums>
+		<years>2014-01-01</years>
+		<genres>Rock</genres>
+		<duration>240000</duration>
+	</song>
+	<song>
+		<id>dbpedia_141</id>
+		<name>Cruise</name>
+		<artists>Florida Georgia Line</artists>
+		<albums>Here's To The Good Times</albums>
+		<years>2012-01-01</years>
+		<genres>Folk, World, Country</genres>
+		<duration>209000</duration>
+	</song>
 </songs>
