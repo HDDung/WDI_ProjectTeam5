@@ -1,7 +1,7 @@
 Fusion GS is from:
 
 1. Amazon Music: Album name+duration
-2.Discogs: genre
+2.Discogs: genre+duration
 3.Fandom: genre is usually from it
 4.youtube
 5.RYM ：

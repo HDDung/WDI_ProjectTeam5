@@ -117,4 +117,22 @@
 		<genres>Hip Hop</genres>
 		<duration>211000</duration>
 	</song>
+	<song>
+		<id>musicbrainz_18844</id>
+		<name>Between the Raindrops</name>
+		<artists>Lifehouse, Natasha Bedingfield</artists>
+		<albums>Almeria</albums>
+		<years>2012-01-01</years>
+		<genres>Rock, Pop</genres>
+		<duration>286000</duration>
+	</song>
+	<song>
+		<id>spotify_15950</id>
+		<name>If I Lose Myself</name>
+		<artists>Onerepublic</artists>
+		<albums>Native</albums>
+		<years>2013-01-01</years>
+		<genres>Pop</genres>
+		<duration>241000</duration>
+	</song>
 </songs>
