@@ -48,7 +48,7 @@ public class ArtistFuserUnionFavourSpotify extends
 	@Override
 	public void fuse(RecordGroup<Song, Attribute> group, Song fusedRecord, Processable<Correspondence<Attribute, Matchable>> schemaCorrespondences, Attribute schemaElement) {
 		FusedValue<List<String>, Song, Attribute> fused = getFusedValue(group, schemaCorrespondences, schemaElement);
-		fusedRecord.setArtist(fused.getValue().toString());
+		fusedRecord.setArtist(fused.getValue().toString().replace("[", "").replace("]", ""));
 		fusedRecord.setAttributeProvenance(Song.ARTIST,
 				fused.getOriginalIds());
 	}
