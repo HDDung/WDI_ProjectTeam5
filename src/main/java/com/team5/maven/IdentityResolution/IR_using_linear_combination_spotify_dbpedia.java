@@ -8,6 +8,7 @@ import com.team5.maven.IdentityResolution.blocking.SongBlockingKeyByAlbumGenerat
 import com.team5.maven.IdentityResolution.blocking.SongBlockingKeyByNameGenerator;
 import com.team5.maven.IdentityResolution.comparators.SongArtistCustomizedComparator;
 import com.team5.maven.IdentityResolution.comparators.SongArtistsComparatorToken;
+import com.team5.maven.IdentityResolution.comparators.SongDateComparator2Years;
 import com.team5.maven.IdentityResolution.comparators.SongNameComparatorEqual;
 import com.team5.maven.IdentityResolution.comparators.SongNameComparatorLevenshtein;
 import com.team5.maven.IdentityResolution.comparators.SongNameComparatorRemoveBrackets;
@@ -52,12 +53,13 @@ public class IR_using_linear_combination_spotify_dbpedia {
 
 		// create a matching rule
 		LinearCombinationMatchingRule<Song, Attribute> matchingRule = new LinearCombinationMatchingRule<>(
-				0.7);
+				0.75);
 		matchingRule.activateDebugReport("data/output/debugResultsMatchingRule_spotify_dbpedia.csv", 10000, gsTest);
 		
 		// add comparators
 		matchingRule.addComparator(new SongNameComparatorRemoveBracketsAndDash(), 0.6);
-		matchingRule.addComparator(new SongArtistCustomizedComparator(), 0.4);
+		matchingRule.addComparator(new SongArtistCustomizedComparator(), 0.35);
+		matchingRule.addComparator(new SongDateComparator2Years(), 0.05);
 		
 
 		// create a blocker (blocking strategy)
