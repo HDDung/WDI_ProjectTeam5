@@ -23,28 +23,28 @@ import de.uni_mannheim.informatik.dws.winter.model.RecordGroup;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.processing.Processable;
 
-public class NameFuserShortestString extends
+public class ArtistFuserShortestString extends
 		AttributeValueFuser<String, Song, Attribute> {
 
-	public NameFuserShortestString() {
+	public ArtistFuserShortestString() {
 		super(new ShortestString<Song, Attribute>());
 	}
 
 	@Override
 	public boolean hasValue(Song record, Correspondence<Attribute, Matchable> correspondence) {
-		return record.hasValue(Song.NAME);
+		return record.hasValue(Song.ARTIST);
 	}
 
 	@Override
 	public String getValue(Song record, Correspondence<Attribute, Matchable> correspondence) {
-		return record.getName();
+		return record.getArtist();
 	}
 
 	@Override
 	public void fuse(RecordGroup<Song, Attribute> group, Song fusedRecord, Processable<Correspondence<Attribute, Matchable>> schemaCorrespondences, Attribute schemaElement) {
 		FusedValue<String, Song, Attribute> fused = getFusedValue(group, schemaCorrespondences, schemaElement);
-		fusedRecord.setName(fused.getValue());
-		fusedRecord.setAttributeProvenance(Song.NAME,
+		fusedRecord.setArtist(fused.getValue());
+		fusedRecord.setAttributeProvenance(Song.ARTIST,
 				fused.getOriginalIds());
 	}
 

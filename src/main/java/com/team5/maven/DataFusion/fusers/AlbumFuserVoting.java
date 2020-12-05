@@ -11,41 +11,45 @@
  */
 package com.team5.maven.DataFusion.fusers;
 
-import com.team5.maven.IdentityResolution.model.Song;
+import java.time.LocalDateTime;
 
+import com.team5.maven.IdentityResolution.model.Song;
 import de.uni_mannheim.informatik.dws.winter.datafusion.AttributeValueFuser;
-import de.uni_mannheim.informatik.dws.winter.datafusion.conflictresolution.string.LongestString;
-import de.uni_mannheim.informatik.dws.winter.datafusion.conflictresolution.string.ShortestString;
+import de.uni_mannheim.informatik.dws.winter.datafusion.conflictresolution.Voting;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
 import de.uni_mannheim.informatik.dws.winter.model.FusedValue;
 import de.uni_mannheim.informatik.dws.winter.model.Matchable;
 import de.uni_mannheim.informatik.dws.winter.model.RecordGroup;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 import de.uni_mannheim.informatik.dws.winter.processing.Processable;
-
-public class NameFuserShortestString extends
+/**
+ * {@link AttributeValueFuser} for the date of {@link Song}s. 
+ * 
+ * @author Oliver Lehmberg (oli@dwslab.de)
+ * 
+ */
+public class AlbumFuserVoting extends 
 		AttributeValueFuser<String, Song, Attribute> {
 
-	public NameFuserShortestString() {
-		super(new ShortestString<Song, Attribute>());
+	public AlbumFuserVoting() {
+		super(new Voting<String, Song, Attribute>());
 	}
-
+	
 	@Override
 	public boolean hasValue(Song record, Correspondence<Attribute, Matchable> correspondence) {
-		return record.hasValue(Song.NAME);
+		return record.hasValue(Song.ALBUM);
 	}
-
+	
 	@Override
 	public String getValue(Song record, Correspondence<Attribute, Matchable> correspondence) {
-		return record.getName();
+		return record.getAlbum();
 	}
 
 	@Override
 	public void fuse(RecordGroup<Song, Attribute> group, Song fusedRecord, Processable<Correspondence<Attribute, Matchable>> schemaCorrespondences, Attribute schemaElement) {
 		FusedValue<String, Song, Attribute> fused = getFusedValue(group, schemaCorrespondences, schemaElement);
-		fusedRecord.setName(fused.getValue());
-		fusedRecord.setAttributeProvenance(Song.NAME,
-				fused.getOriginalIds());
+		fusedRecord.setAlbum(fused.getValue());
+		fusedRecord.setAttributeProvenance(Song.ALBUM, fused.getOriginalIds());
 	}
 
 }

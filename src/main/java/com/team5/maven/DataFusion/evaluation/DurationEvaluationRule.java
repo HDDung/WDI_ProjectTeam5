@@ -12,8 +12,8 @@ public class DurationEvaluationRule extends EvaluationRule<Song, Attribute> {
 
 	@Override
 	public boolean isEqual(Song record1, Song record2, Attribute schemaElement) {
-		// duration unit is ms: 1 min = 60000 ms => 1.5 min = 90000
-		if (Math.abs(record1.getDuration() - record2.getDuration()) <= 90000) {
+		// duration unit is ms: 1 min = 60000 ms => 0.5 min = 30000
+		if (Math.abs(record1.getDuration() - record2.getDuration()) <= 30000) {
 			return true;
 		}
 		return false;
