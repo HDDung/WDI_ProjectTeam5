@@ -15,6 +15,7 @@ import com.team5.maven.IdentityResolution.model.Song;
 
 import de.uni_mannheim.informatik.dws.winter.datafusion.AttributeValueFuser;
 import de.uni_mannheim.informatik.dws.winter.datafusion.conflictresolution.string.LongestString;
+import de.uni_mannheim.informatik.dws.winter.datafusion.conflictresolution.string.ShortestString;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
 import de.uni_mannheim.informatik.dws.winter.model.FusedValue;
 import de.uni_mannheim.informatik.dws.winter.model.Matchable;
@@ -26,7 +27,7 @@ public class NameFuserShortestString extends
 		AttributeValueFuser<String, Song, Attribute> {
 
 	public NameFuserShortestString() {
-		super(new LongestString<Song, Attribute>());
+		super(new ShortestString<Song, Attribute>());
 	}
 
 	@Override
