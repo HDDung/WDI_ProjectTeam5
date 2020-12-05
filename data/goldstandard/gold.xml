@@ -18,4 +18,67 @@
 		<genres>Electronic, Rock, Pop</genres>
 		<duration>243000</duration>
 	</song>
+	<song>
+		<id>musicbrainz_793</id>
+		<name>Little Talks</name>
+		<artists>Of Monsters and Men</artists>
+		<albums>My Head Is An Animal</albums>
+		<years>2011-01-01</years>
+		<genres>Indie pop,Indie folk</genres>
+		<duration>266000</duration>
+	</song>
+	<song>
+		<id>spotify_1314</id>
+		<name>Oh Love</name>
+		<artists>Green Day</artists>
+		<albums>¡Uno!</albums>
+		<years>2012-01-01</years>
+		<genres>Punk rock</genres>
+		<duration>303000</duration>
+	</song>
+	<song>
+		<id>dbpedia_4241</id>
+		<name>Counting Stars</name>
+		<artists>OneRepublic</artists>
+		<albums>Native</albums>
+		<years>2013-01-01</years>
+		<genres>pop</genres>
+		<duration>257000</duration>
+	</song>
+	<song>
+		<id>musicbrainz_2468</id>
+		<name>Every Single Night</name>
+		<artists>Fiona Apple</artists>
+		<albums>The Idler Wheel Is Wiser Than the Driver of the Screw and Whipping Cords Will Serve You More Than Ropes Will Ever Do</albums>
+		<years>2012-01-01</years>
+		<genres>Rock, Pop</genres>
+		<duration>209000</duration>
+	</song>
+	<song>
+		<id>musicbrainz_9915</id>
+		<name>Rock or Bust</name>
+		<artists>AC/DC</artists>
+		<albums>Rock or Bust</albums>
+		<years>2014-01-01</years>
+		<genres>hard rock</genres>
+		<duration>190000</duration>
+	</song>
+	<song>
+		<id>spotify_11063</id>
+		<name>Talking Body</name>
+		<artists>Tove Lo</artists>
+		<albums>Queen Of The Clouds</albums>
+		<years>2014-01-01</years>
+		<genres>Electropop</genres>
+		<duration>238000</duration>
+	</song>
+	<song>
+		<id>dbpedia_4382</id>
+		<name>Words As Weapons</name>
+		<artists>Seether</artists>
+		<albums>Isolate And Medicate</albums>
+		<years>2014-01-01</years>
+		<genres>hard rock</genres>
+		<duration>240000</duration>
+	</song>
 </songs>
