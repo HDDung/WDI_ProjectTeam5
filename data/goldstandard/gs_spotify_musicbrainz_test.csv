@@ -17,9 +17,7 @@ spotify_17917,musicbrainz_17681,TRUE
 spotify_7825,musicbrainz_19204,TRUE
 spotify_2765,musicbrainz_17436,TRUE
 spotify_8026,musicbrainz_15478,TRUE
-spotify_13689,musicbrainz_9853,TRUE
 spotify_16806,musicbrainz_3575,TRUE
-spotify_10759,musicbrainz_32130,TRUE
 spotify_423,musicbrainz_9861,TRUE
 spotify_10672,musicbrainz_2593,TRUE
 spotify_16631,musicbrainz_33632,TRUE
@@ -82,6 +80,8 @@ spotify_17211,musicbrainz_22300,FALSE
 spotify_18350,musicbrainz_17059,FALSE
 spotify_18726,musicbrainz_21028,FALSE
 spotify_17226,musicbrainz_28468,FALSE
+spotify_13689,musicbrainz_9853,FALSE 
+spotify_10759,musicbrainz_32130,FALSE 
 spotify_11300,musicbrainz_10077,FALSE 
 spotify_11517,musicbrainz_3477,FALSE 
 spotify_3857,musicbrainz_1554,FALSE 
