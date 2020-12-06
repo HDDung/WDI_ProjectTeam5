@@ -11,7 +11,7 @@ import de.uni_mannheim.informatik.dws.winter.processing.Processable;
 import de.uni_mannheim.informatik.dws.winter.matching.blockers.generators.RecordBlockingKeyGenerator;
 
 
-public class SongBlockingKeyByNameGeneratorv2 extends
+public class SongBlockingKeyByNameGenerator4 extends
 RecordBlockingKeyGenerator<Song, Attribute> {
 
 	private static final long serialVersionUID = 1L;

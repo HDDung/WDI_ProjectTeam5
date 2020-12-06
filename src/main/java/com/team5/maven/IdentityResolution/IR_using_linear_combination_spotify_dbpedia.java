@@ -6,7 +6,7 @@ import org.slf4j.Logger;
 
 import com.team5.maven.IdentityResolution.blocking.SongBlockingKeyByAlbumGenerator;
 import com.team5.maven.IdentityResolution.blocking.SongBlockingKeyByNameGenerator;
-import com.team5.maven.IdentityResolution.blocking.SongBlockingKeyByNameGeneratorv2;
+import com.team5.maven.IdentityResolution.blocking.SongBlockingKeyByNameGenerator4;
 import com.team5.maven.IdentityResolution.blocking.SongBlockingKeyByNameGeneratorv3;
 import com.team5.maven.IdentityResolution.comparators.SongArtistCustomizedComparator;
 import com.team5.maven.IdentityResolution.comparators.SongArtistsComparatorToken;
@@ -58,18 +58,18 @@ public class IR_using_linear_combination_spotify_dbpedia {
 
 		// create a matching rule
 		LinearCombinationMatchingRule<Song, Attribute> matchingRule = new LinearCombinationMatchingRule<>(
-				0.65);
+				0.7);
 		matchingRule.activateDebugReport("data/output/debugResultsMatchingRule_spotify_dbpedia.csv", 10000, gsTest);
 		
 		// add comparators
 		matchingRule.addComparator(new SongNameComparatorRemoveBracketsAndDash(), 0.6);
-		matchingRule.addComparator(new SongArtistCustomizedComparator(), 0.4);
-//		matchingRule.addComparator(new SongDateComparator1Year(), 0.4);
+		matchingRule.addComparator(new SongArtistCustomizedComparator(), 0.3);
+		matchingRule.addComparator(new SongDateComparator1Year(), 0.1);
 
 		// create a blocker (blocking strategy)
 //		StandardRecordBlocker<Song, Attribute> blocker = new StandardRecordBlocker<Song, Attribute>(new SongBlockingKeyByNameGenerator());
 //		NoBlocker<Song, Attribute> blocker = new NoBlocker<>();
-		SortedNeighbourhoodBlocker<Song, Attribute, Attribute> blocker = new SortedNeighbourhoodBlocker<>(new SongBlockingKeyByNameGeneratorv2(), 50);
+		SortedNeighbourhoodBlocker<Song, Attribute, Attribute> blocker = new SortedNeighbourhoodBlocker<>(new SongBlockingKeyByNameGenerator4(), 50);
 		blocker.setMeasureBlockSizes(true);
 		//Write debug results to file:
 		blocker.collectBlockSizeData("data/output/debugResultsBlocking_spotify_dbpedia.csv", 100);
