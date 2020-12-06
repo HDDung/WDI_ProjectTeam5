@@ -58,13 +58,13 @@ public class IR_using_linear_combination_spotify_dbpedia {
 
 		// create a matching rule
 		LinearCombinationMatchingRule<Song, Attribute> matchingRule = new LinearCombinationMatchingRule<>(
-				0.7);
+				0.65);
 		matchingRule.activateDebugReport("data/output/debugResultsMatchingRule_spotify_dbpedia.csv", 10000, gsTest);
 		
 		// add comparators
 		matchingRule.addComparator(new SongNameComparatorRemoveBracketsAndDash(), 0.6);
-		matchingRule.addComparator(new SongArtistCustomizedComparator(), 0.3);
-		matchingRule.addComparator(new SongDateComparator1Year(), 0.1);
+		matchingRule.addComparator(new SongArtistCustomizedComparator(), 0.4);
+//		matchingRule.addComparator(new SongDateComparator1Year(), 0.1);
 
 		// create a blocker (blocking strategy)
 //		StandardRecordBlocker<Song, Attribute> blocker = new StandardRecordBlocker<Song, Attribute>(new SongBlockingKeyByNameGenerator());
