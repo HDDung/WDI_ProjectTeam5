@@ -69,7 +69,7 @@ public class IR_using_linear_combination_spotify_dbpedia {
 		// create a blocker (blocking strategy)
 //		StandardRecordBlocker<Song, Attribute> blocker = new StandardRecordBlocker<Song, Attribute>(new SongBlockingKeyByNameGenerator());
 //		NoBlocker<Song, Attribute> blocker = new NoBlocker<>();
-		SortedNeighbourhoodBlocker<Song, Attribute, Attribute> blocker = new SortedNeighbourhoodBlocker<>(new SongBlockingKeyByNameGenerator4(), 50);
+		SortedNeighbourhoodBlocker<Song, Attribute, Attribute> blocker = new SortedNeighbourhoodBlocker<>(new SongBlockingKeyByNameGenerator4(), 150);
 		blocker.setMeasureBlockSizes(true);
 		//Write debug results to file:
 		blocker.collectBlockSizeData("data/output/debugResultsBlocking_spotify_dbpedia.csv", 100);

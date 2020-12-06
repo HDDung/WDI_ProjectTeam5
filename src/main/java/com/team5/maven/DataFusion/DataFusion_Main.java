@@ -137,7 +137,7 @@ public class DataFusion_Main
 		
 		// create the fusion engine
 		DataFusionEngine<Song, Attribute> engine = new DataFusionEngine<>(strategy);
-
+		
 		// print consistency report
 		engine.printClusterConsistencyReport(correspondences, null);
 		
@@ -150,7 +150,7 @@ public class DataFusion_Main
 
 		// write the result
 		new SongXMLFormatter().writeXML(new File("data/output/fused.xml"), fusedDataSet);
-
+		
 		// evaluate
 		DataFusionEvaluator<Song, Attribute> evaluator = new DataFusionEvaluator<>(strategy, new RecordGroupFactory<Song, Attribute>());
 		

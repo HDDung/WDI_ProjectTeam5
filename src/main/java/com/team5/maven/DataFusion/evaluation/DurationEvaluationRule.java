@@ -19,9 +19,7 @@ public class DurationEvaluationRule extends EvaluationRule<Song, Attribute> {
 		return false;
 	}
 
-	/* (non-Javadoc)
-	 * @see de.uni_mannheim.informatik.wdi.datafusion.EvaluationRule#isEqual(java.lang.Object, java.lang.Object, de.uni_mannheim.informatik.wdi.model.Correspondence)
-	 */
+
 	@Override
 	public boolean isEqual(Song record1, Song record2,
 			Correspondence<Attribute, Matchable> schemaCorrespondence) {

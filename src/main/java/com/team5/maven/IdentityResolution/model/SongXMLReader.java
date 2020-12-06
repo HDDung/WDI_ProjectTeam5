@@ -21,9 +21,6 @@ import de.uni_mannheim.informatik.dws.winter.model.io.XMLMatchableReader;
 public class SongXMLReader extends XMLMatchableReader<Song, Attribute> implements
 FusibleFactory<Song, Attribute>  {
 
-	/* (non-Javadoc)
-	 * @see de.uni_mannheim.informatik.wdi.model.io.XMLMatchableReader#initialiseDataset(de.uni_mannheim.informatik.wdi.model.DataSet)
-	 */
 	@Override
 	protected void initialiseDataset(DataSet<Song, Attribute> dataset) {
 		super.initialiseDataset(dataset);

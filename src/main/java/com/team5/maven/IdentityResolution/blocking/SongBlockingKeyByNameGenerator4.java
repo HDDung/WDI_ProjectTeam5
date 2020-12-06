@@ -17,9 +17,6 @@ RecordBlockingKeyGenerator<Song, Attribute> {
 	private static final long serialVersionUID = 1L;
 
 
-	/* (non-Javadoc)
-	 * @see de.uni_mannheim.informatik.wdi.matching.blocking.generators.BlockingKeyGenerator#generateBlockingKeys(de.uni_mannheim.informatik.wdi.model.Matchable, de.uni_mannheim.informatik.wdi.model.Result, de.uni_mannheim.informatik.wdi.processing.DatasetIterator)
-	 */
 	@Override
 	public void generateBlockingKeys(Song record, Processable<Correspondence<Attribute, Matchable>> correspondences,
 			DataIterator<Pair<String, Song>> resultCollector) {

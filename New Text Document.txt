@@ -1,0 +1,3 @@
+ArtistFuserUnionFavourSpotify
+	Capitalize Fully Artists
+	Convert it to List. 

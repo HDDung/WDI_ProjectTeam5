@@ -7,6 +7,8 @@ dbpedia_2117	spotify_16139
 
 1-82: smaller than 0.7
 
+86 - 88: Conner cases
+
 Question: if a name of artist appear in boths, should consider as a same or different
 
 

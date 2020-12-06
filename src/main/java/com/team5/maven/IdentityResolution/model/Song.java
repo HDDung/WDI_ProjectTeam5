@@ -146,22 +146,13 @@ public class Song extends AbstractRecord<Attribute> implements Serializable {
 		}
 	}	
 	
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see java.lang.Object#hashCode()
-	 */
+
 	@Override
 	public int hashCode() {
 		int result = 31 + ((name == null) ? 0 : name.hashCode());
 		return result;
 	}
 
-	/*
-	 * (non-Javadoc)
-	 * 
-	 * @see java.lang.Object#equals(java.lang.Object)
-	 */
 	@Override
 	public boolean equals(Object obj) {
 		if (this == obj)
@@ -189,9 +180,7 @@ public class Song extends AbstractRecord<Attribute> implements Serializable {
 	public static final Attribute PRODUCER = new Attribute("Producer");
 	public static final Attribute WRITER = new Attribute("Writer");
 	
-	/* (non-Javadoc)
-	 * @see de.uni_mannheim.informatik.wdi.model.Record#hasValue(java.lang.Object)
-	 */
+
 	@Override
 	public boolean hasValue(Attribute attribute) {
 		if(attribute==NAME)

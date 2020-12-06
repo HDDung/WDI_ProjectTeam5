@@ -18,7 +18,6 @@ import de.uni_mannheim.informatik.dws.winter.similarity.string.TokenizingJaccard
 public class SongAlbumComparatorMaxSim implements Comparator<Song, Attribute> {
 
 	private static final long serialVersionUID = 1L;
-	//private MaximumOfTokenContainment sim = new MaximumOfTokenContainment();
 	private MaximumOfContainment<String> sim = new MaximumOfContainment<String>();
 	private ComparatorLogger comparisonLog;
 
