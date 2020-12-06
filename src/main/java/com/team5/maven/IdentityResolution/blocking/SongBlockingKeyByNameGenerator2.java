@@ -11,7 +11,7 @@ import de.uni_mannheim.informatik.dws.winter.processing.Processable;
 import de.uni_mannheim.informatik.dws.winter.matching.blockers.generators.RecordBlockingKeyGenerator;
 
 
-public class SongBlockingKeyByNameGenerator extends
+public class SongBlockingKeyByNameGenerator2 extends
 RecordBlockingKeyGenerator<Song, Attribute> {
 
 	private static final long serialVersionUID = 1L;
@@ -24,10 +24,8 @@ RecordBlockingKeyGenerator<Song, Attribute> {
 
 		String blockingKeyValue = "";
 		
-		//create key from first 2 characters of first 3 tokens
-		for(int i = 0; i <= 2 && i < tokens.length; i++) {
-			blockingKeyValue += tokens[i].substring(0, Math.min(2,tokens[i].length())).toUpperCase();
-		}
+		// create key from first 2 characters of first token
+		blockingKeyValue += tokens[0].substring(0, Math.min(2,tokens[0].length())).toUpperCase();
 		
 		resultCollector.next(new Pair<>(blockingKeyValue, record));
 	}

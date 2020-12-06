@@ -11,7 +11,7 @@ import de.uni_mannheim.informatik.dws.winter.processing.Processable;
 import de.uni_mannheim.informatik.dws.winter.matching.blockers.generators.RecordBlockingKeyGenerator;
 
 
-public class SongBlockingKeyByNameGenerator extends
+public class SongBlockingKeyByNameGenerator3 extends
 RecordBlockingKeyGenerator<Song, Attribute> {
 
 	private static final long serialVersionUID = 1L;
@@ -19,15 +19,13 @@ RecordBlockingKeyGenerator<Song, Attribute> {
 	@Override
 	public void generateBlockingKeys(Song record, Processable<Correspondence<Attribute, Matchable>> correspondences,
 			DataIterator<Pair<String, Song>> resultCollector) {
-
-		String[] tokens  = record.getName().split(" ");
+		
+		String name = record.getName().replaceAll("\\s","");
 
 		String blockingKeyValue = "";
-		
-		//create key from first 2 characters of first 3 tokens
-		for(int i = 0; i <= 2 && i < tokens.length; i++) {
-			blockingKeyValue += tokens[i].substring(0, Math.min(2,tokens[i].length())).toUpperCase();
-		}
+
+		// create key from first 3 characters of string without whitespaces
+		blockingKeyValue += name.substring(0, Math.min(2,name.length())).toUpperCase();
 		
 		resultCollector.next(new Pair<>(blockingKeyValue, record));
 	}
