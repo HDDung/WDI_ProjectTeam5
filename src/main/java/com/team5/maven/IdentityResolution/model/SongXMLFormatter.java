@@ -47,10 +47,16 @@ public class SongXMLFormatter extends XMLFormatter<Song> {
 				.getAlbum(), record
 				.getMergedAttributeProvenance(Song.ALBUM), doc));
 		
-		LocalDateTime year = record.getYear();
-		if(year != null) {
+		//LocalDateTime year = record.getYear();
+		if(record.getYear() != null) {
+			DateTimeFormatter formatter = new DateTimeFormatterBuilder()
+			        .appendPattern("yyyy-MM-dd")
+			        .parseDefaulting(ChronoField.CLOCK_HOUR_OF_DAY, 0)
+			        .parseDefaulting(ChronoField.MINUTE_OF_HOUR, 0)
+			        .parseDefaulting(ChronoField.SECOND_OF_MINUTE, 0)
+			        .toFormatter(Locale.ENGLISH);
 			song.appendChild(createTextElementWithProvenance("years",
-					Integer.toString(year.getYear()),
+					record.getYear().format(formatter),
 					record.getMergedAttributeProvenance(Song.YEAR), doc));
 		} else {
 			song.appendChild(createTextElementWithProvenance("years",
