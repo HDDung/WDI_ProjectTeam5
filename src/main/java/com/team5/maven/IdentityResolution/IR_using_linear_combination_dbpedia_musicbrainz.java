@@ -4,20 +4,21 @@ import java.io.File;
 
 import org.slf4j.Logger;
 
-import com.team5.maven.IdentityResolution.blocking.SongBlockingKeyByArtistGenerator;
 import com.team5.maven.IdentityResolution.blocking.SongBlockingKeyByNameGenerator;
 import com.team5.maven.IdentityResolution.comparators.SongAlbumComparatorMaxSim;
 import com.team5.maven.IdentityResolution.comparators.SongAlbumComparatorToken;
 import com.team5.maven.IdentityResolution.comparators.SongArtistsComparatorLevenshtein;
 import com.team5.maven.IdentityResolution.comparators.SongArtistsComparatorToken;
+import com.team5.maven.IdentityResolution.comparators.SongDateComparator1Year;
 import com.team5.maven.IdentityResolution.comparators.SongNameComparatorEqual;
 import com.team5.maven.IdentityResolution.comparators.SongNameComparatorLevenshtein;
+import com.team5.maven.IdentityResolution.comparators.SongNameComparatorRemoveBrackets;
+import com.team5.maven.IdentityResolution.comparators.SongNameComparatorRemoveBracketsAndDash;
 import com.team5.maven.IdentityResolution.model.Song;
 import com.team5.maven.IdentityResolution.model.SongXMLReader;
 
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEngine;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator;
-import de.uni_mannheim.informatik.dws.winter.matching.blockers.NoBlocker;
 import de.uni_mannheim.informatik.dws.winter.matching.blockers.SortedNeighbourhoodBlocker;
 import de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardRecordBlocker;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.LinearCombinationMatchingRule;
@@ -52,16 +53,18 @@ public class IR_using_linear_combination_dbpedia_musicbrainz {
 
 		// create a matching rule
 		LinearCombinationMatchingRule<Song, Attribute> matchingRule = new LinearCombinationMatchingRule<>(
-				0.7);
+				0.71);
 		matchingRule.activateDebugReport("data/output/debugResultsMatchingRule_dbpedia_musicbrainz.csv", 10000, gsTest);
 		
 		// add comparators
-		//matchingRule.addComparator(new SongNameComparatorLevenshtein(), 0.5);
-		matchingRule.addComparator(new SongNameComparatorLevenshtein(), 0.65);
-		matchingRule.addComparator(new SongArtistsComparatorToken(), 0.2);
+		//matchingRule.addComparator(new SongNameComparatorRemoveBrackets(), 0.6);
+		//matchingRule.addComparator(new SongNameComparatorLevenshtein(), 1);
+		//matchingRule.addComparator(new SongNameComparatorEqual(), 1);
+		matchingRule.addComparator(new SongArtistsComparatorToken(), 1);
 		//matchingRule.addComparator(new SongArtistsComparatorLevenshtein(), 0.3);
 		//matchingRule.addComparator(new SongAlbumComparatorToken(), 0.25);
-		matchingRule.addComparator(new SongAlbumComparatorMaxSim(), 0.15);
+		//matchingRule.addComparator(new SongAlbumComparatorMaxSim(), 0.15);
+		//matchingRule.addComparator(new SongDateComparator1Year(), 0.15);
 		
 
 		// create a blocker (blocking strategy)
@@ -87,7 +90,7 @@ public class IR_using_linear_combination_dbpedia_musicbrainz {
 				blocker);
 
 		// Create a top-1 global matching
-		// correspondences = engine.getTopKInstanceCorrespondences(correspondences, 1, 0.0);
+		 //correspondences = engine.getTopKInstanceCorrespondences(correspondences, 1, 0.0);
 
 //		 Alternative: Create a maximum-weight, bipartite matching
 //		 MaximumBipartiteMatchingAlgorithm<Movie,Attribute> maxWeight = new MaximumBipartiteMatchingAlgorithm<>(correspondences);
