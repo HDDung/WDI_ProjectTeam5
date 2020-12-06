@@ -207,11 +207,11 @@ public class Song extends AbstractRecord<Attribute> implements Serializable {
 		else if(attribute==YEAR) 
 			return year!=null;
 		else if(attribute==RECORDLABEL)
-			return recordlabel!=null && !getName().isEmpty();
+			return recordlabel!=null && !getRecordLabel().isEmpty();
 		else if(attribute==PRODUCER) 
-			return producer!=null && !getName().isEmpty();
+			return producer!=null && !getProducer().isEmpty();
 		else if(attribute==WRITER)
-			return writer!=null && !getName().isEmpty();
+			return writer!=null && !getWriter().isEmpty();
 		return false;
 	}
 }
