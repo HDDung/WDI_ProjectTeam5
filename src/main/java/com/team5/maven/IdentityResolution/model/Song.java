@@ -9,6 +9,8 @@ import java.util.Map;
 
 import org.apache.commons.lang3.StringUtils;
 
+import com.team5.maven.common.Utilities;
+
 import de.uni_mannheim.informatik.dws.winter.model.AbstractRecord;
 import de.uni_mannheim.informatik.dws.winter.model.defaultmodel.Attribute;
 
@@ -40,6 +42,7 @@ public class Song extends AbstractRecord<Attribute> implements Serializable {
 	}
 
 	public void setName(String name) {
+		name = Utilities.html2text(name);
 		this.name = name;
 	}
 
@@ -48,6 +51,7 @@ public class Song extends AbstractRecord<Attribute> implements Serializable {
 	}
 
 	public void setArtist(String artist) {
+		artist = Utilities.html2text(artist);
 		this.artist = artist;
 	}
 
@@ -56,6 +60,7 @@ public class Song extends AbstractRecord<Attribute> implements Serializable {
 	}
 
 	public void setGenre(String genre) {
+		genre = Utilities.html2text(genre);
 		this.genre = genre;
 	}
 	
@@ -64,6 +69,7 @@ public class Song extends AbstractRecord<Attribute> implements Serializable {
 	}
 
 	public void setAlbum(String album) {
+		album = Utilities.html2text(album);
 		this.album = album;
 	}
 	
@@ -88,6 +94,7 @@ public class Song extends AbstractRecord<Attribute> implements Serializable {
 	}
 
 	public void setRecordLabel(String recordlabel) {
+		recordlabel = Utilities.html2text(recordlabel);
 		this.recordlabel = recordlabel;
 	}
 	
@@ -96,6 +103,7 @@ public class Song extends AbstractRecord<Attribute> implements Serializable {
 	}
 
 	public void setProducer(String producer) {
+		producer = Utilities.html2text(producer);
 		this.producer = producer;
 	}
 	
@@ -104,6 +112,7 @@ public class Song extends AbstractRecord<Attribute> implements Serializable {
 	}
 
 	public void setWriter(String writer) {
+		writer = Utilities.html2text(writer);
 		this.writer = writer;
 	}
 

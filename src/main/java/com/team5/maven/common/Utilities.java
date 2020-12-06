@@ -4,7 +4,11 @@ import org.jsoup.Jsoup;
 
 public final class Utilities {
 	public static String html2text(String html) {
-	    return Jsoup.parse(html).text().replace("&", ",");
+		if (html != null) {
+			return Jsoup.parse(html).text().replace("&", ",");
+		}
+		return html;
+	    
 	}
 }
 	
