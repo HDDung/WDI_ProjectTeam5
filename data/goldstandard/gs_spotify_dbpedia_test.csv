@@ -150,7 +150,6 @@ dbpedia_2160,spotify_17479,FALSE
 dbpedia_1198,spotify_16005,FALSE
 dbpedia_1374,spotify_15681,FALSE
 dbpedia_6144,spotify_12547,FALSE
-dbpedia_6943,spotify_775,FALSE
 dbpedia_5831,spotify_3992,FALSE
 dbpedia_3157,spotify_2099,FALSE
 dbpedia_4687,spotify_4457,FALSE
@@ -195,12 +194,8 @@ dbpedia_8964,spotify_1788,FALSE
 dbpedia_7264,spotify_10849,FALSE
 dbpedia_6092,spotify_10301,FALSE
 dbpedia_5727,spotify_3884,FALSE
-dbpedia_11447,spotify_15448,FALSE
-dbpedia_3797,spotify_18247,FALSE
 dbpedia_10483,spotify_10728,FALSE
 dbpedia_5966,spotify_11183,FALSE
-dbpedia_10062,spotify_10921,FALSE
-dbpedia_9008,spotify_12504,FALSE
 dbpedia_7543,spotify_9483,FALSE
 dbpedia_1782,spotify_5303,FALSE
 dbpedia_4097,spotify_44,FALSE
@@ -211,8 +206,6 @@ dbpedia_3304,spotify_7988,FALSE
 dbpedia_2777,spotify_12047,FALSE
 dbpedia_3214,spotify_18666,FALSE
 dbpedia_11483,spotify_13220,FALSE
-dbpedia_11447,spotify_15448,FALSE
-dbpedia_5111,spotify_4443,FALSE
 dbpedia_10154,spotify_9111,FALSE
 dbpedia_4446,spotify_13286,FALSE
 dbpedia_2337,spotify_14024,FALSE
@@ -221,15 +214,15 @@ dbpedia_7843,spotify_664,FALSE
 dbpedia_11336,spotify_4416,FALSE
 dbpedia_1629,spotify_13318,FALSE
 dbpedia_3255,spotify_12512,FALSE
-dbpedia_9436,spotify_15801,FALSE
+dbpedia_6220,spotify_20076,FALSE
 dbpedia_11169,spotify_13680,FALSE
-dbpedia_1782,spotify_5303,FALSE
-dbpedia_4097,spotify_44,FALSE
-dbpedia_5727,spotify_3884,FALSE
-dbpedia_9274,spotify_13724,FALSE
 dbpedia_4575,spotify_16098,FALSE
 dbpedia_9591,spotify_4700,FALSE
-dbpedia_9460, spotify_14085,FALSE
+dbpedia_7883,spotify_10231,FALSE
 dbpedia_8320,spotify_13757,FALSE
 dbpedia_1397,spotify_4343,FALSE
-dbpedia_6878,spotify_12003,FALSE
+dbpedia_2289,spotify_19585,FALSE
+dbpedia_6878 ,spotify_12003,FALSE
+dbpedia_9460,spotify_14085,FALSE
+dbpedia_9436,spotify_15801,FALSE
+dbpedia_5111,spotify_4443,FALSE

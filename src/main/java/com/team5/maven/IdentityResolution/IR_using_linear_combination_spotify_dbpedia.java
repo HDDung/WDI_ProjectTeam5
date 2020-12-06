@@ -6,8 +6,11 @@ import org.slf4j.Logger;
 
 import com.team5.maven.IdentityResolution.blocking.SongBlockingKeyByAlbumGenerator;
 import com.team5.maven.IdentityResolution.blocking.SongBlockingKeyByNameGenerator;
+import com.team5.maven.IdentityResolution.blocking.SongBlockingKeyByNameGeneratorv2;
+import com.team5.maven.IdentityResolution.blocking.SongBlockingKeyByNameGeneratorv3;
 import com.team5.maven.IdentityResolution.comparators.SongArtistCustomizedComparator;
 import com.team5.maven.IdentityResolution.comparators.SongArtistsComparatorToken;
+import com.team5.maven.IdentityResolution.comparators.SongDateComparator1Year;
 import com.team5.maven.IdentityResolution.comparators.SongDateComparator2Years;
 import com.team5.maven.IdentityResolution.comparators.SongNameComparatorEqual;
 import com.team5.maven.IdentityResolution.comparators.SongNameComparatorLevenshtein;
@@ -20,6 +23,8 @@ import com.team5.maven.IdentityResolution.model.SongXMLReader;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEngine;
 import de.uni_mannheim.informatik.dws.winter.matching.MatchingEvaluator;
 import de.uni_mannheim.informatik.dws.winter.matching.algorithms.MaximumBipartiteMatchingAlgorithm;
+import de.uni_mannheim.informatik.dws.winter.matching.blockers.NoBlocker;
+import de.uni_mannheim.informatik.dws.winter.matching.blockers.SortedNeighbourhoodBlocker;
 import de.uni_mannheim.informatik.dws.winter.matching.blockers.StandardRecordBlocker;
 import de.uni_mannheim.informatik.dws.winter.matching.rules.LinearCombinationMatchingRule;
 import de.uni_mannheim.informatik.dws.winter.model.Correspondence;
@@ -53,19 +58,18 @@ public class IR_using_linear_combination_spotify_dbpedia {
 
 		// create a matching rule
 		LinearCombinationMatchingRule<Song, Attribute> matchingRule = new LinearCombinationMatchingRule<>(
-				0.75);
+				0.65);
 		matchingRule.activateDebugReport("data/output/debugResultsMatchingRule_spotify_dbpedia.csv", 10000, gsTest);
 		
 		// add comparators
 		matchingRule.addComparator(new SongNameComparatorRemoveBracketsAndDash(), 0.6);
-		matchingRule.addComparator(new SongArtistCustomizedComparator(), 0.35);
-		matchingRule.addComparator(new SongDateComparator2Years(), 0.05);
-		
+		matchingRule.addComparator(new SongArtistCustomizedComparator(), 0.4);
+//		matchingRule.addComparator(new SongDateComparator1Year(), 0.4);
 
 		// create a blocker (blocking strategy)
-		StandardRecordBlocker<Song, Attribute> blocker = new StandardRecordBlocker<Song, Attribute>(new SongBlockingKeyByNameGenerator());
-//		NoBlocker<Movie, Attribute> blocker = new NoBlocker<>();
-//		SortedNeighbourhoodBlocker<Movie, Attribute, Attribute> blocker = new SortedNeighbourhoodBlocker<>(new MovieBlockingKeyByTitleGenerator(), 1);
+//		StandardRecordBlocker<Song, Attribute> blocker = new StandardRecordBlocker<Song, Attribute>(new SongBlockingKeyByNameGenerator());
+//		NoBlocker<Song, Attribute> blocker = new NoBlocker<>();
+		SortedNeighbourhoodBlocker<Song, Attribute, Attribute> blocker = new SortedNeighbourhoodBlocker<>(new SongBlockingKeyByNameGeneratorv2(), 50);
 		blocker.setMeasureBlockSizes(true);
 		//Write debug results to file:
 		blocker.collectBlockSizeData("data/output/debugResultsBlocking_spotify_dbpedia.csv", 100);
@@ -80,12 +84,12 @@ public class IR_using_linear_combination_spotify_dbpedia {
 				blocker);
 
 		// Create a top-1 global matching
-//		  correspondences = engine.getTopKInstanceCorrespondences(correspondences, 1, 0.0);
+// 	    correspondences = engine.getTopKInstanceCorrespondences(correspondences, 1, 0.0);
 
-//		 Alternative: Create a maximum-weight, bipartite matching
-//		 MaximumBipartiteMatchingAlgorithm<Song,Attribute> maxWeight = new MaximumBipartiteMatchingAlgorithm<>(correspondences);
-//		 maxWeight.run();
-//		 correspondences = maxWeight.getResult();
+     	//Alternative: Create a maximum-weight, bipartite matching
+//		MaximumBipartiteMatchingAlgorithm<Song,Attribute> maxWeight = new MaximumBipartiteMatchingAlgorithm<>(correspondences);
+//		maxWeight.run();
+//		correspondences = maxWeight.getResult();
 
 		// write the correspondences to the output file
 		new CSVCorrespondenceFormatter().writeCSV(new File("data/output/dbpedia_spotify_correspondences.csv"), correspondences);	
