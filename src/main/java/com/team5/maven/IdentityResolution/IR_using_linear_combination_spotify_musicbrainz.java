@@ -4,17 +4,23 @@ import java.io.File;
 
 import org.slf4j.Logger;
 
+import com.team5.maven.IdentityResolution.blocking.SongBlockingKeyByAlbumGenerator;
 import com.team5.maven.IdentityResolution.blocking.SongBlockingKeyByArtistGenerator;
 import com.team5.maven.IdentityResolution.blocking.SongBlockingKeyByNameGenerator;
+import com.team5.maven.IdentityResolution.blocking.SongBlockingKeyByNameGenerator2;
+import com.team5.maven.IdentityResolution.blocking.SongBlockingKeyByNameGenerator3;
 import com.team5.maven.IdentityResolution.comparators.SongAlbumComparatorMaxSim;
 import com.team5.maven.IdentityResolution.comparators.SongAlbumComparatorToken;
 import com.team5.maven.IdentityResolution.comparators.SongArtistCustomizedComparator;
 import com.team5.maven.IdentityResolution.comparators.SongArtistsComparatorLevenshtein;
 import com.team5.maven.IdentityResolution.comparators.SongArtistsComparatorToken;
+import com.team5.maven.IdentityResolution.comparators.SongDateComparator1Year;
 import com.team5.maven.IdentityResolution.comparators.SongDateComparator2Years;
 import com.team5.maven.IdentityResolution.comparators.SongNameComparatorEqual;
 import com.team5.maven.IdentityResolution.comparators.SongNameComparatorLevenshtein;
+import com.team5.maven.IdentityResolution.comparators.SongNameComparatorRemoveBrackets;
 import com.team5.maven.IdentityResolution.comparators.SongNameComparatorRemoveBracketsAndDash;
+import com.team5.maven.IdentityResolution.comparators.SongNameComparatorTokenJaccard;
 import com.team5.maven.IdentityResolution.model.Song;
 import com.team5.maven.IdentityResolution.model.SongXMLReader;
 
@@ -55,22 +61,26 @@ public class IR_using_linear_combination_spotify_musicbrainz {
 
 		// create a matching rule
 		LinearCombinationMatchingRule<Song, Attribute> matchingRule = new LinearCombinationMatchingRule<>(
-				0.7);
+				0.75);
 		matchingRule.activateDebugReport("data/output/debugResultsMatchingRule_spotify_musicbrainz.csv", 10000, gsTest);
 		
 		// add comparators
-		//matchingRule.addComparator(new SongNameComparatorLevenshtein(), 0.5);
+		//matchingRule.addComparator(new SongNameComparatorLevenshtein(), 0.6);
+		//matchingRule.addComparator(new SongNameComparatorTokenJaccard(), 0.6);
+		//matchingRule.addComparator(new SongNameComparatorEqual(), 0.6);
 		matchingRule.addComparator(new SongNameComparatorRemoveBracketsAndDash(), 0.6);
-		matchingRule.addComparator(new SongArtistCustomizedComparator(), 0.35);
-		matchingRule.addComparator(new SongDateComparator2Years(), 0.05);
-		//matchingRule.addComparator(new SongArtistsComparatorToken(), 0.2);
+		//matchingRule.addComparator(new SongNameComparatorRemoveBrackets(), 0.6);
+		matchingRule.addComparator(new SongArtistCustomizedComparator(), 0.3);
+		matchingRule.addComparator(new SongDateComparator2Years(), 0.1);
+		//matchingRule.addComparator(new SongArtistsComparatorLevenshtein(), 0.4);
 		//matchingRule.addComparator(new SongArtistsComparatorLevenshtein(), 0.3);
 		
 
 		// create a blocker (blocking strategy)
 		
-		StandardRecordBlocker<Song, Attribute> blocker = new StandardRecordBlocker<Song, Attribute>(new SongBlockingKeyByNameGenerator());
+		StandardRecordBlocker<Song, Attribute> blocker = new StandardRecordBlocker<Song, Attribute>(new SongBlockingKeyByNameGenerator3());
 		//StandardRecordBlocker<Song, Attribute> blocker = new StandardRecordBlocker<Song, Attribute>(new SongBlockingKeyByArtistGenerator());
+		
 
 		//NoBlocker<Song, Attribute> blocker = new NoBlocker<>();
  		
